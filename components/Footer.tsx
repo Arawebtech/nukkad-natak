@@ -1,0 +1,566 @@
+"use client";
+
+import { Mail, Phone } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { FaLinkedinIn, FaPlay } from "react-icons/fa";
+import { IoIosPause } from "react-icons/io";
+import { TiSocialFacebook } from "react-icons/ti";
+
+export default function Footer() {
+
+
+
+    const quickLinks = [
+    {
+      title: "About Us",
+      link: "/about",
+    },
+    {
+      title: "Gallery",
+      link: "/gallery",
+    },
+    {
+      title: "Join Our Team",
+      link: "/team",
+    },
+    {
+      title: "Inquiry",
+      link: "/enquiry",
+    },
+    {
+      title: "Contact Us",
+      link: "/enquiry",
+    },
+  ];
+  const services = [
+    "Government Campaigns",
+    "Corporate Awareness",
+    "CSR & College Activations",
+    "Election Awareness",
+    "And Many More...",
+  ];
+
+  const socials = [
+    {
+      icon: <TiSocialFacebook size={15} />,
+      link: "#",
+    },
+    {
+      icon: <FaLinkedinIn size={15} />,
+      link: "#",
+    },
+    {
+      icon: <FaPlay size={15} />,
+      link: "#",
+    },
+    {
+      icon: <IoIosPause size={15} />,
+      link: "#",
+    },
+  ];
+
+  return (
+    <footer
+      style={{
+        position: "relative",
+        width: "100%",
+        overflow: "hidden",
+        backgroundColor:"#1a1008",
+        backgroundImage: "url('/images/download.svg')",
+  
+      }}
+    >
+      {/* TOP GLOW LINE */}
+{/* <div
+  style={{
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "10px",
+    background:
+      "linear-gradient(90deg, rgba(255,255,255,0), rgba(235,99,29,1), rgba(255,255,255,0))",
+    boxShadow: "0 0 12px rgba(235,99,29,0.7)",
+    zIndex: 20,
+  }}
+/> */}
+{/* TOP LINE WITH BACKGROUND IMAGE */}
+<div
+  style={{
+    position: "absolute",
+    top: -5,
+    left: 0,
+    width: "100%",
+    height: "12px",
+    backgroundImage: "url('/images/footerline.png')",
+    backgroundRepeat: "repeat-x",
+    backgroundPosition: "center",
+    backgroundSize: "contain",
+    zIndex: 20,
+    opacity: 0.95,
+  }}
+/>
+      <div
+      className="website-container-with-bg-img main-padding-top"
+        style={{
+          position: "relative",
+          zIndex: 10,
+        //   width: "100%",
+        //   maxWidth: "1400px",
+        //   marginInline: "auto",
+        //   paddingTop: "60px",
+        //   paddingBottom: "60px",
+        //   paddingLeft: "24px",
+        //   paddingRight: "24px",
+        }}
+      >
+        {/* GRID */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns:
+              "repeat(auto-fit,minmax(220px,1fr))",
+            gap: "30px",
+            paddingBottom: "5px",
+          }}
+        >
+         
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "15px",
+            }}
+          >
+            <Image
+              src="/images/logo1.png"
+              alt="Logo"
+              width={150}
+              height={80}
+              style={{
+                objectFit: "contain",
+                height: "auto",
+              }}
+            />
+
+            <p
+              style={{
+                color: "white",
+                fontSize: "12px",
+                lineHeight: "24px",
+                maxWidth: "450px",
+              }}
+            >
+              India's #1 Street Play Agency for Awareness Campaigns,
+              Brand Activations, Corporate Promotions & Social
+              Awareness Programs.
+            </p>
+
+            {/* CONTACT */}
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              {/* PHONE */}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <div
+                  style={{
+                    width: "25px",
+                    height: "15px",
+                    borderRadius: "50%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "flex-start",
+                    flexShrink: 0,
+                  }}
+                >
+                  <Phone
+                    size={18}
+                    style={{
+                      color: "#EB631D",
+                    }}
+                  />
+                </div>
+
+                <span
+                  style={{
+                    color: "rgba(255,255,255,0.8)",
+                    fontSize: "12px",
+                  }}
+                >
+                  +91 98765 43210
+                </span>
+              </div>
+
+              {/* EMAIL */}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <div
+                  style={{
+                    width: "26px",
+                    height: "44px",
+                    borderRadius: "50%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "flex-start",
+                    flexShrink: 0,
+                  }}
+                >
+                  <Mail
+                    size={18}
+                    style={{
+                      color: "#EB631D",
+                    }}
+                  />
+                </div>
+
+                <span
+                  style={{
+                    color: "rgba(255,255,255,0.8)",
+                    fontSize: "12px",
+                    wordBreak: "break-all",
+                  }}
+                >
+                  info@nukkadnatak.com
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* QUICK LINKS */}
+          <div>
+<h2
+  style={{
+    color: "#ffffff",
+    fontSize: "20px",
+    fontWeight: 700,
+    marginBottom: "20px",
+    position: "relative",
+    display: "inline-block",
+    paddingBottom: "5px",
+  }}
+>
+  Quick Links
+
+  <span
+    style={{
+      position: "absolute",
+      left: 0,
+      bottom: 0,
+      width: "60%",
+      height: "3px",
+      background: "#EB631D",
+      borderRadius: "5px",
+    }}
+  />
+</h2>
+
+            <ul
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "10px",
+                listStyle: "none",
+                padding: 0,
+                margin: 0,
+              }}
+            >
+              {quickLinks.map((item) => (
+                <li key={item.title}>
+                  <Link
+                    href={item.link}
+                    style={{
+                      position: "relative",
+                      display: "inline-block",
+                      width: "fit-content",
+                      color: "white",
+                      fontSize: "12px",
+                      fontWeight: 500,
+                      textDecoration: "none",
+                      transition: "all 0.3s ease",
+                    }}
+                    onMouseEnter={(e) => {
+                      const target =
+                        e.currentTarget as HTMLElement;
+
+                      target.style.color = "#EB631D";
+
+                      const line = target.querySelector(
+                        ".footer-line"
+                      ) as HTMLElement;
+
+                      if (line) {
+                        line.style.width = "100%";
+                      }
+                    }}
+                    onMouseLeave={(e) => {
+                      const target =
+                        e.currentTarget as HTMLElement;
+
+                      target.style.color =
+                        "white";
+
+                      const line = target.querySelector(
+                        ".footer-line"
+                      ) as HTMLElement;
+
+                      if (line) {
+                        line.style.width = "0";
+                      }
+                    }}
+                  >
+                    {item.title}
+
+                    <span
+                      className="footer-line"
+                      style={{
+                        position: "absolute",
+                        left: 0,
+                        bottom: "-5px",
+                        width: "0",
+                        height: "2px",
+                        borderRadius: "999px",
+                        background: "#EB631D",
+                        transition: "all 0.5s ease",
+                      }}
+                    />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* SERVICES */}
+          <div>
+       <h2
+  style={{
+    color: "#ffffff",
+    fontSize: "20px",
+    fontWeight: 700,
+    marginBottom: "20px",
+    position: "relative",
+    display: "inline-block",
+    paddingBottom: "10px",
+  }}
+>
+  Our Services
+
+  <span
+    style={{
+      position: "absolute",
+      left: 0,
+      bottom: 0,
+      width: "60%",
+      height: "3px",
+      background: "#EB631D",
+      borderRadius: "5px",
+    }}
+  />
+</h2>
+
+              <ul
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "10px",
+                listStyle: "none",
+                padding: 0,
+                margin: 0,
+              }}
+            >
+              {services.map((item) => (
+                           <li>
+                  <Link
+                    href=""
+                    style={{
+                      position: "relative",
+                      display: "inline-block",
+                      width: "fit-content",
+                      color: "white",
+                      fontSize: "12px",
+                      fontWeight: 500,
+                      textDecoration: "none",
+                      transition: "all 0.3s ease",
+                    }}
+                    onMouseEnter={(e) => {
+                      const target =
+                        e.currentTarget as HTMLElement;
+
+                      target.style.color = "#EB631D";
+
+                      const line = target.querySelector(
+                        ".footer-line"
+                      ) as HTMLElement;
+
+                      if (line) {
+                        line.style.width = "100%";
+                      }
+                    }}
+                    onMouseLeave={(e) => {
+                      const target =
+                        e.currentTarget as HTMLElement;
+
+                      target.style.color =
+                        "white";
+
+                      const line = target.querySelector(
+                        ".footer-line"
+                      ) as HTMLElement;
+
+                      if (line) {
+                        line.style.width = "0";
+                      }
+                    }}
+                  >
+
+           
+       
+                
+                  {item}
+
+                  <span
+                    className="service-line"
+                    style={{
+                      position: "absolute",
+                      left: 0,
+                      bottom: "-5px",
+                      width: "0",
+                      height: "2px",
+                      borderRadius: "999px",
+                      background: "#EB631D",
+                      transition: "all 0.5s ease",
+                    }}
+                  />
+                         </Link>
+                </li>
+
+              ))}
+            </ul>
+          </div>
+
+          {/* SOCIAL */}
+          <div>
+       <h2
+  style={{
+    color: "#ffffff",
+    fontSize: "20px",
+    fontWeight: 700,
+    marginBottom: "20px",
+    position: "relative",
+    display: "inline-block",
+    paddingBottom: "5px",
+  }}
+>
+  Follow Us
+
+  <span
+    style={{
+      position: "absolute",
+      left: 0,
+      bottom: 0,
+      width: "60%",
+      height: "3px",
+      background: "#EB631D",
+      borderRadius: "5px",
+    }}
+  />
+</h2>
+
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "10px",
+                flexWrap: "wrap",
+              }}
+            >
+              {socials.map((item, index) => (
+                <Link
+                  href={item.link}
+                  key={index}
+                  style={{
+                    position: "relative",
+                    width: "40px",
+                    height: "40px",
+                    borderRadius: "50%",
+                    border:
+                      "1px solid rgba(255,255,255,0.1)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    overflow: "hidden",
+                    transition: "all 0.5s ease",
+                    background:"white" ,
+                    color: "#EB631D",
+                    backdropFilter: "blur(10px)",
+                    textDecoration: "none",
+                  }}
+                  onMouseEnter={(e) => {
+                    const target =
+                      e.currentTarget as HTMLElement;
+
+                    target.style.transform =
+                      "translateY(-5px)";
+                    target.style.background = "#EB631D";
+                    target.style.color = "#ffffff";
+                    target.style.border =
+                      "1px solid #EB631D";
+                  }}
+                  onMouseLeave={(e) => {
+                    const target =
+                      e.currentTarget as HTMLElement;
+
+                    target.style.transform =
+                      "translateY(0px)";
+                    target.style.background =
+                      "rgba(255,255,255,0.05)";
+                    target.style.color = "#EB631D";
+                    target.style.border =
+                      "1px solid rgba(255,255,255,0.1)";
+                  }}
+                >
+                  {item.icon}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* COPYRIGHT */}
+        <div
+          style={{
+          
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+            paddingBottom:"20px",
+            paddingTop:"20px"
+          }}
+        >
+          <p
+            style={{
+              fontSize: "12px",
+              color: "white",
+              lineHeight: "30px",
+            }}
+          >
+            © 2025 VI Events (nukkadnatak.com). All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
