@@ -78,7 +78,7 @@ export default function Header() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
-                padding: "15px 0",
+                padding: "10px 0",
                 gap: "20px",
               }}
             >
@@ -92,12 +92,12 @@ export default function Header() {
                 }}
               >
                 <Image
-                  src="/images/logo1.png"
+                  src="/main-logo1.png"
                   alt="Logo"
-                  width={150}
-                  height={70}
+                  width={100}
+                  height={100}
                   style={{
-                    width: "150px",
+                    width: "120px",
                     height: "auto",
                     objectFit: "contain",
                   }}
@@ -354,12 +354,12 @@ style={{
     }}
   >
     <Image
-      src="/images/logo.svg"
+      src="/main-logo1.png"
       alt="Logo"
       width={145}
       height={55}
       style={{
-        width: "145px",
+        width: "90px",
         height: "auto",
       }}
     />
