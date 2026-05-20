@@ -164,78 +164,84 @@ export default function Footer() {
                 flexDirection: "column",
               }}
             >
-              {/* PHONE */}
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                }}
-              >
-                <div
-                  style={{
-                    width: "25px",
-                    height: "15px",
-                    borderRadius: "50%",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "flex-start",
-                    flexShrink: 0,
-                  }}
-                >
-                  <Phone
-                    size={18}
-                    style={{
-                      color: "#EB631D",
-                    }}
-                  />
-                </div>
+      {/* PHONE */}
+<a
+  href="tel:+919310996542"
+  style={{
+    display: "flex",
+    alignItems: "center",
+    textDecoration: "none",
+    cursor: "pointer",
+  }}
+>
+  <div
+    style={{
+      width: "25px",
+      height: "15px",
+      borderRadius: "50%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "flex-start",
+      flexShrink: 0,
+    }}
+  >
+    <Phone
+      size={18}
+      style={{
+        color: "#EB631D",
+      }}
+    />
+  </div>
 
-                <span
-                  style={{
-                    color: "rgba(255,255,255,0.8)",
-                    fontSize: "12px",
-                  }}
-                >
-                  +91 98765 43210
-                </span>
-              </div>
+  <span
+    style={{
+      color: "rgba(255,255,255,0.8)",
+      fontSize: "12px",
+    }}
+  >
+    +91 9310996542
+  </span>
+</a>
 
-              {/* EMAIL */}
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                }}
-              >
-                <div
-                  style={{
-                    width: "26px",
-                    height: "44px",
-                    borderRadius: "50%",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "flex-start",
-                    flexShrink: 0,
-                  }}
-                >
-                  <Mail
-                    size={18}
-                    style={{
-                      color: "#EB631D",
-                    }}
-                  />
-                </div>
+{/* EMAIL */}
+<a
+  href="mailto:contact@nukkadnatak.com"
+  style={{
+    display: "flex",
+    alignItems: "center",
+    textDecoration: "none",
+    cursor: "pointer",
+  }}
+>
+  <div
+    style={{
+      width: "26px",
+      height: "44px",
+      borderRadius: "50%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "flex-start",
+      flexShrink: 0,
+    }}
+  >
+    <Mail
+      size={18}
+      style={{
+        color: "#EB631D",
+      }}
+    />
+  </div>
 
-                <span
-                  style={{
-                    color: "rgba(255,255,255,0.8)",
-                    fontSize: "12px",
-                    wordBreak: "break-all",
-                  }}
-                >
-                  info@nukkadnatak.com
-                </span>
-              </div>
+  <span
+    style={{
+      color: "rgba(255,255,255,0.8)",
+      fontSize: "12px",
+      wordBreak: "break-all",
+    }}
+  >
+    contact@nukkadnatak.com
+  </span>
+</a>
             </div>
           </div>
 

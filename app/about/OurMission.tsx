@@ -132,7 +132,7 @@ const OurMission = () => {
                 fontSize: "14px",
               }}
             >
-              info@nukadnatak.com
+              contact@nukkadnatak.com
             </p>
           </div>
 

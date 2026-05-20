@@ -387,12 +387,12 @@ const handleSubmit = async (e: React.FormEvent) => {
     >
       Call Us:{" "}
       <span className="text-[#f26a0a] font-bold">
-        +91 98765 43210
+        +91 9310996542
       </span>
       <br />
       (Mon - Sat, 10 AM - 7 PM)
       <br />
-      Email: info@nukkadnatak.com
+      Email: contact@nukkadnatak.com
     </p>
   </div>
 </div>

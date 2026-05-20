@@ -236,7 +236,7 @@ style={{
 
                   {/* ICON */}
                   <Link
-                    href="mailto:info@nukkadnatak.com"
+                    href="mailto:contact@nukkadnatak.com"
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -552,7 +552,7 @@ style={{
         }}
       >
         <Link
-          href="mailto:info@nukkadnatak.com"
+          href="mailto:contact@nukkadnatak.com"
           style={{
             display: "flex",
             alignItems: "center",
