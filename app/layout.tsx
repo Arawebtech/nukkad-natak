@@ -26,6 +26,10 @@ export default function RootLayout({
     <html lang="en" style={{ scrollBehavior: "smooth" }}>
       <body
         className={inter.className}
+        style={{
+          paddingTop: "70px",
+          overflowX: "hidden",
+        }}
       >
         <ClientEffects />
 

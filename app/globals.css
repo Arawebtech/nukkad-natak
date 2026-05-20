@@ -73,8 +73,7 @@ body{
 
   color:var(--color-black);
   font-family:var(--font-primary);
-  padding-top: 70px;
-  overflow-x: hidden;
+
 }
 
 /* =========================
