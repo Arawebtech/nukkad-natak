@@ -20,28 +20,28 @@
 
 //   const items = [
 //     {
-//       image: "/images/home9.png",
+//       image: "/images/home9.webp",
 //       bgImage: "/images/homeblack1.png",
 //       title: "Swachh Bharat Drive",
 //       category: "Government Campaigns",
 //       location: "Bangalore",
 //     },
 //     {
-//       image: "/images/home10.png",
+//       image: "/images/home10.webp",
 //       bgImage: "/images/homeblack1.png",
 //       title: "BSES Energy Awareness",
 //       category: "Government Campaigns",
 //       location: "Delhi",
 //     },
 //     {
-//       image: "/images/home11.png",
+//       image: "/images/home11.webp",
 //       bgImage: "/images/homeblack1.png",
 //       title: "Election Awareness Drive",
 //       category: "Government Campaigns",
 //       location: "Mumbai",
 //     },
 //     {
-//       image: "/images/home11.png",
+//       image: "/images/home11.webp",
 //       bgImage: "/images/homeblack1.png",
 //       title: "Election Awareness Drive 2",
 //       category: "Government Campaigns",
@@ -320,28 +320,28 @@ import Loader from "@/components/common/Loader";
 
   const staticData = [
     {
-      image: "/images/home9.png",
+      image: "/images/home9.webp",
       bgImage: "/images/homeblack1.png",
       title: "Swachh Bharat Drive",
       category: "Government Campaigns",
       location: "Bangalore",
     },
     {
-      image: "/images/home10.png",
+      image: "/images/home10.webp",
       bgImage: "/images/homeblack1.png",
       title: "BSES Energy Awareness",
       category: "Government Campaigns",
       location: "Delhi",
     },
     {
-      image: "/images/home11.png",
+      image: "/images/home11.webp",
       bgImage: "/images/homeblack1.png",
       title: "Election Awareness Drive",
       category: "Government Campaigns",
       location: "Mumbai",
     },
     {
-      image: "/images/home11.png",
+      image: "/images/home11.webp",
       bgImage: "/images/homeblack1.png",
       title: "Election Awareness Drive 2",
       category: "Government Campaigns",

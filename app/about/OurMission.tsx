@@ -208,7 +208,7 @@ const OurMission = () => {
         >
           <img
             ref={imageRef}
-            src="/images/about1.png"
+            src="/images/about1.webp"
             alt="mission"
             style={{
               width: "100%",

@@ -301,16 +301,27 @@ const CareerSection = () => {
 
                 </div>
 
-                <div className="relative w-full md:w-[300px] h-[180px] overflow-hidden image-reveal">
+                {/* <div className="relative w-full md:w-[300px] h-[180px] overflow-hidden image-reveal">
 
                   <Image
                     src="/images/team2.png"
                     alt="Vision"
-                    fill
+                        width={100}
+              height={80}
                     className="object-contain image-scale"
                   />
 
-                </div>
+                </div> */}
+                <div className="relative w-full md:w-[300px] h-[180px] overflow-hidden image-reveal">
+  <Image
+    src="/images/team2.webp"
+    alt="Vision"
+    fill
+    priority
+    sizes="(max-width: 768px) 100vw, 300px"
+    className="object-contain image-scale"
+  />
+</div>
 
               </div>
 

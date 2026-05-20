@@ -95,7 +95,7 @@
 //     display: "flex",
 //     alignItems: "start",
 //             backgroundImage:
-//       "url('/images/about.png')",
+//       "url('/images/about.webp')",
 //     backgroundSize: "cover",
 //     backgroundPosition: "center",
 //      backgroundRepeat: "no-repeat",
@@ -156,6 +156,7 @@ import OurMission from "./OurMission";
 import WhyChooseUs from "./WhyChooseUs";
 import WhatWeDo from "./WhatWeDo";
 import FaqPage from "./FaqPage";
+import HeroBanner from "@/components/common/HeroBanner";
 
 
 const AboutPage = () => {
@@ -244,7 +245,7 @@ const AboutPage = () => {
   return (
     <div style={styles.page}>
       {/* HERO SECTION */}
-      <div
+      {/* <div
         ref={heroRef}
         style={styles.hero}
         className="hero-mobile"
@@ -254,7 +255,7 @@ const AboutPage = () => {
             ref={contentRef}
             style={styles.content}
           >
-            {/* BREADCRUMB */}
+       
             <Breadcrumb
               items={[
                 { label: "Home", href: "/" },
@@ -262,7 +263,7 @@ const AboutPage = () => {
               ]}
             />
 
-            {/* HEADING */}
+      
             <Heading2
               title="About"
               color="white"
@@ -270,7 +271,7 @@ const AboutPage = () => {
   desktopSize = "50px"
             />
 
-            {/* DESC */}
+      
             <p style={styles.desc}>
               Using the power of street plays to
               <br />
@@ -285,7 +286,7 @@ const AboutPage = () => {
               </span>
             </p>
 
-            {/* TEXT */}
+       
             <p style={styles.text}>
               WI Events (nukkadnatak.com) is India's
               leading street play agency,
@@ -295,7 +296,26 @@ const AboutPage = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
+
+<HeroBanner
+  backgroundImage="/images/about.webp"
+  heading="About Us"
+  breadcrumbItems={[
+    { label: "Home", href: "/" },
+    { label: "About Us" },
+  ]}
+  description={
+    <>
+      Using the power of street plays to
+      <br />
+      <span style={{ color: "#F56A28" }}>
+        inform, inspire and bring real change.
+      </span>
+    </>
+  }
+  text="WI Events (nukkadnatak.com) is India's leading street play agency, specializing in awareness campaigns and brand activations that connect with people at the heart."
+/>
 
       {/* STORY */}
        <div className="website-container">
@@ -364,7 +384,7 @@ const styles: any = {
     display: "flex",
     alignItems: "flex-start",
 
-    backgroundImage: "url('/images/about.png')",
+    backgroundImage: "url('/images/about.webp')",
 
     backgroundSize: "cover",
     backgroundPosition: "center",

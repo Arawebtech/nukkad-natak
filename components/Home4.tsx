@@ -15,21 +15,21 @@
 //   // ✅ TOP DATA (MAP USE HERE)
 // const items = [
 //   {
-//     image: "/images/home9.png",
+//     image: "/images/home9.webp",
 //     bgImage: "/images/homeblack1.png",
 //     title: "Swachh Bharat Drive",
 //     buttonTitle: "View More",
 //     icon: <Circle size={14} />,
 //   },
 //   {
-//     image: "/images/home10.png",
+//     image: "/images/home10.webp",
 //     bgImage: "/images/homeblack1.png",
 //     title: "BSES Energy Awareness",
 //     buttonTitle: "View More",
 //     icon: <Circle size={14} />,
 //   },
 //   {
-//     image: "/images/home11.png",
+//     image: "/images/home11.webp",
 //     bgImage: "/images/homeblack1.png",
 //     title: "Election Awareness Drive",
 //     buttonTitle: "View More",
@@ -211,21 +211,21 @@ const Home4 = () => {
   // DATA
   const items = [
     {
-      image: "/images/home9.png",
+      image: "/images/home9.webp",
       bgImage: "/images/homeblack1.png",
       title: "Swachh Bharat Drive",
       buttonTitle: "View More",
       icon: <Circle size={14} />,
     },
     {
-      image: "/images/home10.png",
+      image: "/images/home10.webp",
       bgImage: "/images/homeblack1.png",
           title: "Swachh Bharat Drive",
       buttonTitle: "View More",
       icon: <Circle size={14} />,
     },
     {
-      image: "/images/home11.png",
+      image: "/images/home11.webp",
       bgImage: "/images/homeblack1.png",
            title: "Swachh Bharat Drive",
       buttonTitle: "View More",

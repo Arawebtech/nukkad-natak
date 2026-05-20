@@ -151,7 +151,7 @@
 //       >
 //         <img
 //           ref={imageRef}
-//           src="/images/about1.png"
+//           src="/images/about1.webp"
 //           alt="story"
 //           style={{
 //             width: "100%",
@@ -275,7 +275,7 @@ const OurStory = () => {
         alignItems: "center",
         justifyContent: "space-between",
         gap: "60px",
-        padding: "0px 0px 60px 0px",
+        padding: "60px 0px 60px 0px",
         flexWrap: "wrap",
       }}
     >
@@ -332,7 +332,7 @@ const OurStory = () => {
       >
         <img
           ref={imageRef}
-          src="/images/about1.png"
+          src="/images/about1.webp"
           alt="story"
           style={{
             width: "100%",

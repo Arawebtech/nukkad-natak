@@ -158,8 +158,13 @@ useEffect(() => {
         @media (max-width: 768px) {
           .hero-mobile {
             min-height: auto !important;
+
+    
+
+            background: url("/images/mobile-banner2.jpeg")
+              bottom center / cover no-repeat !important;
             padding-top: 50px !important;
-            padding-bottom: 70px !important;
+            padding-bottom: 60px !important;
             background-position: center !important;
           }
         }

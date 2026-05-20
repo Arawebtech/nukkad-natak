@@ -101,7 +101,7 @@ const AboutPage = () => {
     <div style={styles.page}>
       {/* HERO SECTION */}
   <HeroBanner
-  backgroundImage="/images/about.png"
+  backgroundImage="/images/about.webp"
   heading="Join Our Team"
   breadcrumbItems={[
     { label: "Home", href: "/" },
