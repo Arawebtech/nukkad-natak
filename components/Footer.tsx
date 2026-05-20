@@ -283,8 +283,8 @@ export default function Footer() {
                 margin: 0,
               }}
             >
-              {quickLinks.map((item) => (
-                <li key={item.title}>
+              {quickLinks.map((item,index) => (
+                <li key={index}>
                   <Link
                     href={item.link}
                     style={{
@@ -386,8 +386,8 @@ export default function Footer() {
                 margin: 0,
               }}
             >
-              {services.map((item) => (
-                           <li>
+              {services.map((item,index) => (
+                           <li key={index}>
                   <Link
                     href=""
                     style={{
