@@ -13,7 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Nukkar Natak",
+  title: "Nukkad Natak",
   description: "Modern Animated Website",
 };
 

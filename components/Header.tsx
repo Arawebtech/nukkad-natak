@@ -4,9 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Mail, MessageCircle, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
 
    const navLinks = [
@@ -121,42 +123,52 @@ export default function Header() {
                     gap: "40px",
                   }}
                 >
-                  {navLinks.map((item) => (
+          {navLinks.map((item) => {
+  const isActive = pathname === item.link;
+
+  return (
                     <Link
                       key={item.title}
                       href={item.link}
-                      className="
-                      group
-                      relative
-                      inline-block
-                      text-white
-                      text-[15px]
-                      font-medium
-                      transition-all
-                      duration-300
-                      hover:text-[#EB631D]
-                      "
+                 className="
+group
+relative
+inline-block
+text-[15px]
+font-medium
+transition-all
+duration-300
+hover:text-[#EB631D]
+"
+
+style={{
+  color: isActive ? "#EB631D" : "#ffffff",
+}}
                     >
                       {item.title}
 
                       {/* LINE */}
-                      <span
-                        className="
-                        absolute
-                        left-0
-                        -bottom-2
-                        h-[2px]
-                        w-0
-                        rounded-full
-                        bg-[#EB631D]
-                        transition-all
-                        duration-500
-                        ease-in-out
-                        group-hover:w-full
-                        "
-                      />
+                 <span
+  className="
+  absolute
+  left-0
+  -bottom-2
+  h-[2px]
+  w-0
+  rounded-full
+  bg-[#EB631D]
+  transition-all
+  duration-500
+  ease-in-out
+  group-hover:w-full
+  "
+  style={{
+    width: isActive ? "100%" : "",
+  }}
+/>
                     </Link>
-                  ))}
+         );
+})}
                 </div>
 
                 {/* RIGHT SIDE */}
@@ -353,7 +365,7 @@ style={{
       backdropFilter: "blur(14px)",
     }}
   >
-    <Image
+    {/* <Image
       src="/main-logo1.png"
       alt="Logo"
       width={145}
@@ -362,7 +374,20 @@ style={{
         width: "90px",
         height: "auto",
       }}
-    />
+    /> */}
+    <Link href="/" onClick={() => setMenuOpen(false)}>
+  <Image
+    src="/main-logo1.png"
+    alt="Logo"
+    width={145}
+    height={55}
+    style={{
+      width: "90px",
+      height: "auto",
+      cursor: "pointer",
+    }}
+  />
+</Link>
 
     <button
       onClick={() => setMenuOpen(false)}
@@ -415,7 +440,10 @@ style={{
         flexDirection: "column",
       }}
     >
-      {navLinks.map((item) => (
+  {navLinks.map((item) => {
+  const isActive = pathname === item.link;
+
+  return (
         <Link
           key={item.title}
           href={item.link}
@@ -426,7 +454,7 @@ style={{
             alignItems: "center",
             justifyContent: "space-between",
             padding: "20px 0",
-            color: "#ffffff",
+           color: isActive ? "#EB631D" : "#ffffff",
             fontSize: "16px",
             fontWeight: 500,
             textDecoration: "none",
@@ -461,14 +489,15 @@ style={{
               width: "100%",
               height: "2px",
               background: "#EB631D",
-              transform: "scaleX(0)",
+             transform: isActive ? "scaleX(1)" : "scaleX(0)",
               transformOrigin: "left",
               transition: "transform 0.4s ease",
             }}
             className="menu-line"
           />
         </Link>
-      ))}
+  );
+})}
     </div>
 
     {/* BOTTOM */}

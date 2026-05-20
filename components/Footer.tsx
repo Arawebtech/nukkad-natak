@@ -136,7 +136,7 @@ export default function Footer() {
             <Image
               src="/main-logo1.png"
               alt="Logo"
-              width={150}
+              width={135}
               height={80}
               style={{
                 objectFit: "contain",
