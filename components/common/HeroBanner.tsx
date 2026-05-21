@@ -91,9 +91,10 @@ useEffect(() => {
           display: "flex",
           alignItems: "flex-start",
 
-          backgroundImage: `url(${backgroundImage})`,
+          // backgroundImage: `url(${backgroundImage})`,
+          backgroundImage: `url(${backgroundImage?.trim() ? backgroundImage : "/images/herobanner.webp"})`,
           backgroundSize: "cover",
-          backgroundPosition: "left",
+          backgroundPosition: "right",
           backgroundRepeat: "no-repeat",
 
           overflow: "hidden",

@@ -497,10 +497,10 @@ const Home5 = () => {
           mobileSize="25px"
           desktopSize="30px"
         />
-      </div>
+      </div> */}
 
       <div className="filterWrapper">
-        <div className="filterScroll" ref={scrollRef}>
+        {/* <div className="filterScroll" ref={scrollRef}>
           <div className="filterGrid" ref={gridRef}>
             {filters.map((item, index) => {
               const isLast = index === filters.length - 1;
@@ -520,9 +520,9 @@ const Home5 = () => {
               );
             })}
           </div>
-        </div>
+        </div> */}
 
-        <div className="dotsWrapper">
+        {/* <div className="dotsWrapper">
           {filters.map((_, index) => (
             <span
               key={index}
@@ -531,7 +531,7 @@ const Home5 = () => {
               }`}
             />
           ))}
-        </div>
+        </div> */}
 
         <div>
           <HeadingUpdate
@@ -566,7 +566,7 @@ const Home5 = () => {
 </span>
           </div>
         </div>
-      </div> */}
+      </div>
 
       <style jsx>{`
         .wrapper {

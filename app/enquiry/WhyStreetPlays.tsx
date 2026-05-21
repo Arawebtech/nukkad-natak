@@ -110,10 +110,10 @@ const WhyStreetPlays = () => {
 
       <div className="headingBox">
         <HeadingUpdate
-          title="Why Street Plays"
+          title="Why Street"
           color="black"
           title2={true}
-          title2Text=" Work So Well"
+          title2Text=" Plays Work"
           mobileSize="25px"
           desktopSize="30px"
         />
@@ -176,7 +176,7 @@ const WhyStreetPlays = () => {
       <style jsx>{`
         .wrapper {
           width: 100%;
-          padding: 0px 0px 60px 0px;
+          padding: 0px;
         }
 
        

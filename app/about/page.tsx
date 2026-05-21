@@ -299,7 +299,7 @@ const AboutPage = () => {
       </div> */}
 
 <HeroBanner
-  backgroundImage="/images/about.webp"
+  backgroundImage="/images/herobanner.webp"
   heading="About Us"
   breadcrumbItems={[
     { label: "Home", href: "/" },

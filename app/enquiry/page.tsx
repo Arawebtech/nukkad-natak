@@ -101,7 +101,7 @@ const Enquiry = () => {
     <div style={styles.page}>
       {/* HERO SECTION */}
   <HeroBanner
-  backgroundImage="/images/about.webp"
+  backgroundImage="/images/herobanner.webp"
   heading="Company Enquiry"
   breadcrumbItems={[
     { label: "Home", href: "/" },

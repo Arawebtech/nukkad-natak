@@ -88,7 +88,11 @@ const WhoAreWe = () => {
       {/* CONTENT */}
 <div ref={gridRef} className="textWrapper">
 <span>
-    At <a href="">NukkadNatak.com</a>, we are a passionate Nukkad Natak Group and Street Play Agency with over 15 years of experience in creating live performances that connect directly with people. We believe that street theatre is not just entertainment, it is one of the most powerful ways to spread awareness, start conversations, and create real impact within communities.
+    {/* At <a href="">NukkadNatak.com</a>, */}
+    At <span style={{
+    color:"#eb631d"
+  }}>NukkadNatak.com</span>,
+     we are a passionate Nukkad Natak Group and Street Play Agency with over 15 years of experience in creating live performances that connect directly with people. We believe that street theatre is not just entertainment, it is one of the most powerful ways to spread awareness, start conversations, and create real impact within communities.
 
   <br />
   <br />
