@@ -13,6 +13,9 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Heading2 from "@/components/common/Heading2";
+import { GiModernCity, GiTheaterCurtains } from "react-icons/gi";
+import { GoOrganization } from "react-icons/go";
+import { FaPeopleGroup } from "react-icons/fa6";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,22 +45,23 @@ const WhyChooseUs = () => {
 
   const stats = [
     {
-      icon: <Theater size={150} />,
+      // icon: <Theater size={150} />,
+      icon: <GiTheaterCurtains size={150} />,
       number: "1000+",
       label: "Street Plays Performed",
     },
     {
-      icon: <Users size={150} />,
+      icon: <GoOrganization  size={150} />,
       number: "500+",
       label: "Clients & Organizations",
     },
     {
-      icon: <MapPin size={150} />,
+      icon: <GiModernCity size={150} />,
       number: "250+",
       label: "Cities & Towns",
     },
     {
-      icon: <Users size={150} />,
+      icon: <FaPeopleGroup size={150} />,
       number: "50 Lakh+",
       label: "People Reached",
     },
@@ -261,7 +265,7 @@ const WhyChooseUs = () => {
 
                 <div
   style={{
-    color: "#F56A28",
+    color: "#EB631D",
     marginBottom: "20px",
     display: "flex",
     justifyContent: "center",
