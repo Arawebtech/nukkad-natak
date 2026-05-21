@@ -91,10 +91,10 @@ export default function AwarenessBanner() {
       ref={sectionRef}
       style={{
         width: "100%",
-        minHeight: "100vh",
+        minHeight: "90vh",
 
         background:
-          "url('/images/home.png') top / cover no-repeat",
+          "url('/images/home.png') left / cover no-repeat",
 
         display: "flex",
         alignItems: "center",
@@ -174,7 +174,7 @@ export default function AwarenessBanner() {
           <p
             style={{
               color: "white",
-              fontSize: "clamp(12px, 2.2vw, 16px)",
+              fontSize: "clamp(14px, 2.2vw, 18px)",
               lineHeight: "22px",
               margin: 0,
               maxWidth: "100%",

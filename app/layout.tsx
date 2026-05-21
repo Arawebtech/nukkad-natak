@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import ClientEffects from "@/components/ClientEffects";
+
 import TrafficTracker from "@/components/common/TrafficTracker";
 
 const inter = Inter({
@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" style={{ scrollBehavior: "smooth" }}>
+    <html lang="en">
       <body
         className={inter.className}
         style={{
@@ -31,7 +31,7 @@ export default function RootLayout({
           overflowX: "hidden",
         }}
       >
-        <ClientEffects />
+  
 
         <Header />
          <TrafficTracker />

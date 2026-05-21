@@ -59,6 +59,9 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
+    backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
 }
 
 html,
@@ -73,6 +76,7 @@ body{
 
   color:var(--color-black);
   font-family:var(--font-primary);
+  -webkit-font-smoothing: antialiased;
 
 }
 

@@ -11,6 +11,7 @@ import Home4 from "@/components/Home4";
 import Home5 from "@/components/Home5";
 import WhatWeDo from "@/components/home/WhatWeDo";
 import WhoAreWe from "@/components/home/WhoAreWe";
+import WhyStreetPlays from "./enquiry/WhyStreetPlays";
 
 export default function HomeClient() {
 
@@ -67,10 +68,11 @@ export default function HomeClient() {
      </div>
 
         <div className="website-container">
-   <Home4 />
+   <Home4 />  
      </div>
         <div className="website-container">
   
+   <WhyStreetPlays />
    <Home5 />
      </div>
 

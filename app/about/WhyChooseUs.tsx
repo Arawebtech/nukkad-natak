@@ -248,7 +248,7 @@ const WhyChooseUs = () => {
     textAlign: "center",
   }}
 >
-                <div
+                {/* <div
                   style={{
                     color: "#F56A28",
                     marginBottom: "20px",
@@ -257,7 +257,19 @@ const WhyChooseUs = () => {
                   }}
                 >
                   {item.icon}
-                </div>
+                </div> */}
+
+                <div
+  style={{
+    color: "#F56A28",
+    marginBottom: "20px",
+    display: "flex",
+    justifyContent: "center",
+  }}
+  className="stats-icon"
+>
+  {item.icon}
+</div>
 
                 <h2
                   style={{
@@ -301,6 +313,12 @@ const WhyChooseUs = () => {
     align-items: start;
   }
 
+  .stats-icon :global(svg) {
+  width: 150px;
+  height: 150px;
+}
+
+
   @media (max-width: 992px) {
     .why-wrapper {
       grid-template-columns: 1fr !important;
@@ -327,6 +345,10 @@ const WhyChooseUs = () => {
       border-left: none !important;
       padding-left: 0 !important;
     }
+        .stats-icon :global(svg) {
+    width: 80px;
+    height: 80px;
+  }
   }
 `}</style>
       </div>

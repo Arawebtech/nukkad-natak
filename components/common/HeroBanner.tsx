@@ -93,7 +93,7 @@ useEffect(() => {
 
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "left",
           backgroundRepeat: "no-repeat",
 
           overflow: "hidden",

@@ -595,7 +595,7 @@ export default function Footer() {
             paddingTop:"20px"
           }}
         >
-          <p
+          {/* <p
             style={{
               fontSize: "12px",
               color: "white",
@@ -603,7 +603,40 @@ export default function Footer() {
             }}
           >
             © 2025 VI Events (nukkadnatak.com). All Rights Reserved.
-          </p>
+          </p> */}
+          <p
+  style={{
+    fontSize: "12px",
+    color: "white",
+    lineHeight: "30px",
+    display: "flex",
+    flexWrap: "wrap",
+    gap: "5px",
+    justifyContent: "center",
+    alignItems: "center",
+    whiteSpace: "nowrap",
+  }}
+>
+  © {new Date().getFullYear()} (
+  <a
+    href="https://nukkadnatak.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ color: "#fff", textDecoration: "underline" }}
+  >
+    nukkadnatak.com
+  </a>
+  ). All Rights Reserved.
+  <span>Developed & Designed by</span>
+  <a
+    href="https://arawebtechnologies.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ color: "#fff", textDecoration: "underline" }}
+  >
+    Ara Web Technologies
+  </a>
+</p>
         </div>
       </div>
     </footer>

@@ -488,7 +488,7 @@ const Home5 = () => {
 
   return (
     <div ref={sectionRef} className="">
-      <div>
+      {/* <div>
         <HeadingUpdate
           title="Why Street "
           color="black"
@@ -515,13 +515,7 @@ const Home5 = () => {
 
                      {!isLast && <span className="borderLine" />}
 
-                  {/* {!isLast && (
-                    <img
-                      src="/images/borderline.png"
-                      alt="divider"
-                      className="borderLine"
-                    />
-                  )} */}
+         
                 </div>
               );
             })}
@@ -572,7 +566,7 @@ const Home5 = () => {
 </span>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <style jsx>{`
         .wrapper {
