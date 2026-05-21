@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaLinkedinIn, FaPlay } from "react-icons/fa";
@@ -136,7 +136,7 @@ export default function Footer() {
             <Image
               src="/main-logo1.png"
               alt="Logo"
-              width={135}
+              width={150}
               height={80}
               style={{
                 objectFit: "contain",
@@ -152,97 +152,11 @@ export default function Footer() {
                 maxWidth: "450px",
               }}
             >
-              India's #1 Street Play Agency for Awareness Campaigns,
-              Brand Activations, Corporate Promotions & Social
-              Awareness Programs.
+            Creating awareness campaigns, CSR initiatives, and public engagement activities across India for government organizations, educational institutions, NGOs, and brands.
             </p>
 
             {/* CONTACT */}
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-      {/* PHONE */}
-<a
-  href="tel:+919310996542"
-  style={{
-    display: "flex",
-    alignItems: "center",
-    textDecoration: "none",
-    cursor: "pointer",
-  }}
->
-  <div
-    style={{
-      width: "25px",
-      height: "15px",
-      borderRadius: "50%",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "flex-start",
-      flexShrink: 0,
-    }}
-  >
-    <Phone
-      size={18}
-      style={{
-        color: "#EB631D",
-      }}
-    />
-  </div>
-
-  <span
-    style={{
-      color: "rgba(255,255,255,0.8)",
-      fontSize: "12px",
-    }}
-  >
-    +91 9310996542
-  </span>
-</a>
-
-{/* EMAIL */}
-<a
-  href="mailto:contact@nukkadnatak.com"
-  style={{
-    display: "flex",
-    alignItems: "center",
-    textDecoration: "none",
-    cursor: "pointer",
-  }}
->
-  <div
-    style={{
-      width: "26px",
-      height: "44px",
-      borderRadius: "50%",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "flex-start",
-      flexShrink: 0,
-    }}
-  >
-    <Mail
-      size={18}
-      style={{
-        color: "#EB631D",
-      }}
-    />
-  </div>
-
-  <span
-    style={{
-      color: "rgba(255,255,255,0.8)",
-      fontSize: "12px",
-      wordBreak: "break-all",
-    }}
-  >
-    contact@nukkadnatak.com
-  </span>
-</a>
-            </div>
+      
           </div>
 
           {/* QUICK LINKS */}
@@ -483,6 +397,131 @@ export default function Footer() {
     }}
   />
 </h2>
+
+<div
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    padding:"0px 0px 30px 0px"
+  }}
+>
+
+  <a
+    href="tel:+919310996542"
+    style={{
+      display: "flex",
+      alignItems: "center",
+      textDecoration: "none",
+      cursor: "pointer",
+    }}
+  >
+    <div
+      style={{
+        width: "25px",
+        height: "15px",
+        borderRadius: "50%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "flex-start",
+        flexShrink: 0,
+      }}
+    >
+      <Phone
+        size={18}
+        style={{
+          color: "#EB631D",
+        }}
+      />
+    </div>
+
+    <span
+      style={{
+        color: "rgba(255,255,255,0.8)",
+        fontSize: "12px",
+      }}
+    >
+      +91 9310996542
+    </span>
+  </a>
+
+
+  <a
+    href="mailto:contact@nukkadnatak.com"
+    style={{
+      display: "flex",
+      alignItems: "center",
+      textDecoration: "none",
+      cursor: "pointer",
+    }}
+  >
+    <div
+      style={{
+        width: "26px",
+        height: "44px",
+        borderRadius: "50%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "flex-start",
+        flexShrink: 0,
+      }}
+    >
+      <Mail
+        size={18}
+        style={{
+          color: "#EB631D",
+        }}
+      />
+    </div>
+
+    <span
+      style={{
+        color: "rgba(255,255,255,0.8)",
+        fontSize: "12px",
+        wordBreak: "break-all",
+      }}
+    >
+      contact@nukkadnatak.com
+    </span>
+  </a>
+
+
+  <div
+    style={{
+      display: "flex",
+      alignItems: "flex-start",
+      gap: "8px",
+      marginTop: "6px",
+    }}
+  >
+    <div
+      style={{
+        width: "26px",
+        minWidth: "26px",
+        display: "flex",
+        alignItems: "flex-start",
+        justifyContent: "flex-start",
+      }}
+    >
+      <MapPin
+        size={18}
+        style={{
+          color: "#EB631D",
+          marginTop: "2px",
+        }}
+      />
+    </div>
+
+    <span
+      style={{
+        color: "rgba(255,255,255,0.8)",
+        fontSize: "12px",
+        lineHeight: "18px",
+      }}
+    >
+      New Delhi, India
+    </span>
+  </div>
+</div>
 
             <div
               style={{

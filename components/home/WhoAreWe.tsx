@@ -5,6 +5,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { HeadingUpdate } from "../common/HeadingUpdate";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -85,17 +86,23 @@ const WhoAreWe = () => {
       </div>
 
       {/* CONTENT */}
-      <div ref={gridRef} className="textWrapper">
-        <span className="whatText ">
-          Street plays have the unique ability to connect directly with
-          people in their own language, in their own space. Over the
-          years, we have partnered with government bodies, corporates,
-          NGOs and educational institutions to communicate messages that
-          matter. Over the years, we have partnered with government
-          bodies, corporates, NGOs and educational institutions to
-          communicate messages that matter.
-        </span>
-      </div>
+<div ref={gridRef} className="textWrapper">
+<span>
+    At <a href="">NukkadNatak.com</a>, we are a passionate Nukkad Natak Group and Street Play Agency with over 15 years of experience in creating live performances that connect directly with people. We believe that street theatre is not just entertainment, it is one of the most powerful ways to spread awareness, start conversations, and create real impact within communities.
+
+  <br />
+  <br />
+
+  Over the years, our team has worked on awareness campaigns, public engagement programs, educational performances, CSR activities, and promotional street plays across different parts of India. We perform in public spaces, schools, colleges, rural areas, marketplaces, corporate events, and community gatherings where direct audience interaction matters the most.
+
+  <br />
+  <br />
+
+  Our artists perform in multiple languages including Hindi, Punjabi, Urdu, Gujarati, Marathi, Bengali, Tamil, and Telugu, helping us connect naturally with audiences from different regions and cultural backgrounds. Every performance is created with a simple goal: to make people listen, relate, and remember the message long after the performance ends.
+
+</span>
+
+</div>
 
       <style jsx>{`
         .textWrapper {

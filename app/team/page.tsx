@@ -123,13 +123,11 @@ const AboutPage = () => {
       </span>
     </>
   }
-  text="WI Events (nukkadnatak.com) is India's leading street play agency,
-specializing in awareness campaigns and brand activations
-that connect with people at the heart."
+  text="(NukkadNatak.com) is India’s leading Nukkad Natak and street play agency, creating impactful awareness campaigns and audience engagement programs that connect directly with people."
 />
 
     <div className="website-container">
-        {/* <WorkWithUs/> */}
+        <WorkWithUs/>
         <CareerSection/>
       </div>
 

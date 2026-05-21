@@ -471,10 +471,10 @@ const Services = () => {
         }
 
         .image {
-          width: 90%;
-          max-width: 170px;
-          height: 170px;
-          object-fit: contain;
+          width: 86%;
+          // max-width: 220px;
+          // height: 170px;
+          object-fit: cover;
           display: block;
         }
 
@@ -505,8 +505,9 @@ const Services = () => {
           }
 
           .image {
-            max-width: 85px;
-            height: 85px;
+            max-width: 100px;
+            height: 100px;
+            object-fit:contain;
           }
 
           .title {

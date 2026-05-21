@@ -9,7 +9,7 @@ import gsap from "gsap";
 import Breadcrumb from "@/components/common/Breadcrumb";
 import Heading2 from "@/components/common/Heading2";
 import HeroBanner from "@/components/common/HeroBanner";
-import WorkWithUs from "./WorkWithUs";
+import WhyStreetPlays from "./WhyStreetPlays";
 import EnquirySection from "./EnquirySection";
 
 
@@ -127,8 +127,8 @@ const Enquiry = () => {
 />
 
     <div className="website-container">
-        {/* <WorkWithUs/> */}
         <EnquirySection/>
+        <WhyStreetPlays/>
       </div>
 
 

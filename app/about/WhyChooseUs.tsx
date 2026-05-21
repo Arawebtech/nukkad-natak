@@ -19,22 +19,22 @@ gsap.registerPlugin(ScrollTrigger);
 const WhyChooseUs = () => {
   const leftData = [
     {
-      icon: <Users size={40} />,
+      icon: <Users size={35} />,
       title: "Experienced Team",
       desc: "Skilled artists, directors & campaign managers with years of expertise.",
     },
     {
-      icon: <Lightbulb size={40} />,
+      icon: <Lightbulb size={35} />,
       title: "Impactful Approach",
       desc: "Creative, engaging & result-driven performances.",
     },
     {
-      icon: <Target size={40} />,
+      icon: <Target size={35} />,
       title: "Pan India Reach",
       desc: "Delivering campaigns across cities, towns & rural areas.",
     },
     {
-      icon: <ShieldCheck size={40} />,
+      icon: <ShieldCheck size={35} />,
       title: "Trusted by Leaders",
       desc: "Partnered with NDMC, SDMC, BSES & many leading organizations.",
     },
@@ -42,22 +42,22 @@ const WhyChooseUs = () => {
 
   const stats = [
     {
-      icon: <Theater size={100} />,
+      icon: <Theater size={150} />,
       number: "1000+",
       label: "Street Plays Performed",
     },
     {
-      icon: <Users size={100} />,
+      icon: <Users size={150} />,
       number: "500+",
       label: "Clients & Organizations",
     },
     {
-      icon: <MapPin size={100} />,
+      icon: <MapPin size={150} />,
       number: "250+",
       label: "Cities & Towns",
     },
     {
-      icon: <Users size={100} />,
+      icon: <Users size={150} />,
       number: "50 Lakh+",
       label: "People Reached",
     },
@@ -174,7 +174,7 @@ const WhyChooseUs = () => {
             style={{
               display: "flex",
               flexDirection: "column",
-              gap: "10px",
+              gap: "20px",
             }}
           >
             {leftData.map((item, index) => (

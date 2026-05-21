@@ -295,8 +295,9 @@ const CareerSection = () => {
                   />
 
                   <p className="text-[14px] leading-[26px] pt-3 text-black font-semibold max-w-[270px]">
-                    To be India&apos;s most trusted street play agency inspiring
-                    behavioral change and building a better tomorrow.
+                    {/* To be India&apos;s most trusted street play agency inspiring
+                    behavioral change and building a better tomorrow. */}
+                    To become India’s most trusted Nukkad Natak platform inspiring awareness, positive change, and stronger communities.
                   </p>
 
                 </div>

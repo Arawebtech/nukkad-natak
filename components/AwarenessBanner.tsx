@@ -142,7 +142,7 @@ export default function AwarenessBanner() {
                 margin: 0,
               }}
             >
-              Book India’s #1 Street Play Agency for
+             India’s Trusted Nukkad Natak Group
             </p>
 
             <div
@@ -165,9 +165,9 @@ export default function AwarenessBanner() {
               margin: 0,
             }}
           >
-            Awareness Campaigns & Brand{" "}
+           Creating Meaningful Impact Through {" "} 
             <span style={{ color: "#F6A623" }}>
-              Activations
+              Awareness
             </span>
           </h1>
 
@@ -180,7 +180,7 @@ export default function AwarenessBanner() {
               maxWidth: "100%",
             }}
           >
-            Trusted by NGOs, SMBs, B2B & Leading Organizations
+           Trusted by government organizations, educational institutions, NGOs, and brands across India for awareness campaigns and public engagement initiatives.
           </p>
 
           <div

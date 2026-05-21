@@ -550,16 +550,26 @@ const Home5 = () => {
           />
 
           <div style={{ paddingBottom: "50px" }}>
-            <span
-              style={{
-                fontSize: "clamp(14px, 3vw, 16px)",
-                fontWeight: "500",
-              }}
-            >
-              Join hands with us to create awareness, inspire communities, and
-              drive meaningful social impact through powerful street
-              performances and engaging public campaigns.
-            </span>
+       <span
+  style={{
+    fontSize: "clamp(14px, 3vw, 16px)",
+    fontWeight: "500",
+  }}
+>
+  Strong messages create real impact when they reach people in a genuine and relatable way. At <span style={{
+    color:"#eb631d"
+  }}>NukkadNatak.com</span>, we work with organizations, educational institutions, government departments, NGOs, and brands that want to connect with people through the power of live performance and public engagement.
+
+  <br />
+  <br />
+
+  If you are planning an awareness campaign, CSR activity, educational initiative, or audience engagement program, our team is ready to help you bring your message closer to communities through meaningful Nukkad Natak and Street Play performances.
+
+  <br />
+  <br />
+
+  We believe street theatre still has the power to move people, start conversations, and inspire positive change, especially when the performance feels honest, local, and human.
+</span>
           </div>
         </div>
       </div>

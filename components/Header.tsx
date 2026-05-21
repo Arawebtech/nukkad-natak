@@ -24,6 +24,11 @@ export default function Header() {
       title: "Join Our Team",
       link: "/team",
     },
+
+        {
+      title: "Enquire Now",
+      link: "/enquiry",
+    },
   ];
  
   useEffect(() => {
@@ -120,6 +125,7 @@ export default function Header() {
                   style={{
                     display: "flex",
                     alignItems: "center",
+                    
                     gap: "40px",
                   }}
                 >
@@ -172,13 +178,13 @@ style={{
                 </div>
 
                 {/* RIGHT SIDE */}
-                <div
+                {/* <div
                   style={{
                     display: "flex",
                     alignItems: "center",
                     gap: "28px",
                   }}
-                >
+                > */}
         
               {/* <Link
   href="/contact"
@@ -235,7 +241,7 @@ style={{
 </Link> */}
 
                   {/* ICON */}
-                  <Link
+                  {/* <Link
                     href="mailto:contact@nukkadnatak.com"
                     style={{
                       display: "flex",
@@ -246,10 +252,10 @@ style={{
                     }}
                   >
                     <Mail size={18} />
-                  </Link>
+                  </Link> */}
 
                   {/* ICON */}
-                  <Link
+                  {/* <Link
                     href="#"
                     style={{
                       display: "flex",
@@ -260,8 +266,8 @@ style={{
                     }}
                   >
                     <MessageCircle size={18} />
-                  </Link>
-                </div>
+                  </Link> */}
+                {/* </div> */}
               </div>
 
               {/* MOBILE MENU BUTTON */}

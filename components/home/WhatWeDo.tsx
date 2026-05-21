@@ -87,13 +87,25 @@ const WhatWeDo = () => {
       {/* TEXT */}
       <div ref={gridRef} className="textWrapper">
         <span className="whatText">
-          Street plays have the unique ability to connect directly with
-          people in their own language, in their own space. Over the
-          years, we have partnered with government bodies, corporates,
-          NGOs and educational institutions to communicate messages that
-          matter. Over the years, we have partnered with government
-          bodies, corporates, NGOs and educational institutions to
-          communicate messages that matter.
+
+  <span>
+    We create professional Nukkad Natak and Street Play performances for organizations, institutions, brands, government campaigns, and social initiatives looking to engage audiences in a meaningful and memorable way.
+  </span>
+
+  <br />
+  <br />
+
+  <span>
+    Our performances are designed around real audience behaviour. Instead of one-way communication, we focus on interaction, storytelling, emotion, and participation so people feel connected to the message rather than simply hearing it. Whether it is a social awareness campaign, a public outreach activity, a college program, or a brand engagement event, our team works closely to create performances that fit the audience, location, and purpose of the campaign.
+  </span>
+
+  <br />
+  <br />
+
+  <span>
+    From social awareness topics and public education drives to corporate CSR campaigns and promotional activities, our experienced performers know how to capture attention in crowded public spaces and turn everyday conversations into impactful live experiences through street theatre.
+  </span>
+
         </span>
       </div>
 

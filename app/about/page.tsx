@@ -307,14 +307,14 @@ const AboutPage = () => {
   ]}
   description={
     <>
-      Using the power of street plays to
+      Powerful Street Plays 
       <br />
       <span style={{ color: "#F56A28" }}>
-        inform, inspire and bring real change.
+        That Drive Awareness, Engagement & Real Impact
       </span>
     </>
   }
-  text="WI Events (nukkadnatak.com) is India's leading street play agency, specializing in awareness campaigns and brand activations that connect with people at the heart."
+  text="As a trusted Nukkad Natak agency in India, (nukkadnatak.com) specializes in street play campaigns, public awareness programs and brand activations for government and private organizations"
 />
 
       {/* STORY */}

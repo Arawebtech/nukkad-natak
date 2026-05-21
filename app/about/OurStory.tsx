@@ -291,7 +291,7 @@ const OurStory = () => {
           <Heading2 title="Our" color="black" title2={true} title2Text="Story" />
         </div>
 
-        <p
+        {/* <p
           ref={para1Ref}
           style={{
             fontWeight: 600,
@@ -317,7 +317,45 @@ const OurStory = () => {
           in their own language, in their own space. Over the years, we have
           partnered with government bodies, corporates, NGOs and educational
           institutions to communicate messages that matter.
-        </p>
+        </p> */}
+        <p
+  ref={para1Ref}
+  style={{
+    fontWeight: 600,
+    fontSize: "16px",
+    marginBottom: "10px",
+    marginTop: "24px",
+    lineHeight: "1.5",
+  }}
+>
+  <a
+    href="/about"
+    style={{
+      color: "inherit",
+      textDecoration: "none",
+    }}
+  >
+    NukkadNatak.com
+  </a>{" "}
+  began with a simple vision – making awareness more direct,
+  relatable, and connected to people at the ground level.
+</p>
+
+<p
+  ref={para2Ref}
+  style={{
+    color: "#666",
+    lineHeight: "1.8",
+    fontSize: "12px",
+  }}
+>
+  What started as a creative initiative gradually evolved into a
+  trusted Nukkad Natak Group working on awareness campaigns, CSR
+  initiatives, educational programs, and community outreach
+  activities across India. Over the years, our team has delivered
+  60+ government projects and 150+ private campaigns while creating
+  meaningful audience connection through impactful communication.
+</p>
       </div>
 
       {/* RIGHT IMAGE */}
