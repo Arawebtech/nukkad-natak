@@ -72,7 +72,7 @@ export default function Header() {
     height: "2px",
     background:
       "linear-gradient(90deg, rgba(255,255,255,0), rgba(235,99,29,0.9), rgba(255,255,255,0))",
-    opacity: 0.9,
+    opacity: 0.5,
     boxShadow: "0 0 12px rgba(235,99,29,0.7)",
     zIndex: 30,
   }}
@@ -99,12 +99,13 @@ export default function Header() {
                 }}
               >
                 <Image
-                  src="/main-logo1.png"
+                  // src="/main-logo1.png"
+                  src="/images/last-logo2.png"
                   alt="Logo"
                   width={100}
                   height={100}
                   style={{
-                    width: "120px",
+                    width: "130px",
                     height: "auto",
                     objectFit: "contain",
                   }}
@@ -383,7 +384,8 @@ style={{
     /> */}
     <Link href="/" onClick={() => setMenuOpen(false)}>
   <Image
-    src="/main-logo1.png"
+    // src="/main-logo1.png"
+    src="/images/last-logo2.png"
     alt="Logo"
     width={145}
     height={55}
