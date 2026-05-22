@@ -24,6 +24,12 @@ import {
 
 import Heading2 from "@/components/common/Heading2";
 import { websiteApi } from "../api/website.api";
+import { MdOutlineGroups } from "react-icons/md";
+import { FaTheaterMasks } from "react-icons/fa";
+import { GiMegaphone } from "react-icons/gi";
+import { IoChatbubbleEllipses } from "react-icons/io5";
+import { RiUserCommunityLine } from "react-icons/ri";
+import { VscWorkspaceTrusted } from "react-icons/vsc";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,39 +39,72 @@ const EnquirySection = () => {
       (HTMLDivElement | null)[]
     >([]);
 
-    const leftData = [
-    {
-      icon: <Users size={40} />,
-      title: "Experienced Team",
-      desc: "Skilled artists, directors & campaign managers with years of expertise.",
-    },
-    {
-      icon: <Lightbulb size={40} />,
-      title: "Impactful Approach",
-      desc: "Creative, engaging & result-driven performances.",
-    },
-    {
-      icon: <Target size={40} />,
-      title: "Pan India Reach",
-      desc: "Delivering campaigns across cities, towns & rural areas.",
-    },
-    {
-      icon: <ShieldCheck size={40} />,
-      title: "Trusted by Leaders",
-      desc: "Partnered with NDMC, SDMC, BSES & many leading organizations.",
-    },
-       {
-      icon: <ShieldCheck size={40} />,
-      title: "Trusted by Leaders",
-      desc: "Partnered with NDMC, SDMC, BSES & many leading organizations.",
-    },
-       {
-      icon: <ShieldCheck size={40} />,
-      title: "Trusted by Leaders",
-      desc: "Partnered with NDMC, SDMC, BSES & many leading organizations.",
-    },
-  ];
+  //   const leftData = [
+  //   {
+  //     icon: <MdOutlineGroups size={40} />,
+  //     title: "Ground-Level Storytelling",
+  //     desc: "Skilled artists, directors & campaign managers with years of expertise.",
+  //   },
+  //   {
+  //     icon: <FaTheaterMasks size={40} />,
+  //     title: "I",
+  //     desc: "Creative, engaging & result-driven performances.",
+  //   },
+  //   {
+  //     icon: <GiMegaphone  size={40} />,
+  //     title: "Culture ",
+  //     desc: "Delivering campaigns across cities, towns & rural areas.",
+  //   },
+  //   {
+  //     icon: <IoChatbubbleEllipses size={40} />,
+  //     title: "Voice That Create Change",
+  //     desc: "Partnered with NDMC, SDMC, BSES & many leading organizations.",
+  //   },
+  //      {
+  //     icon: <RiUserCommunityLine  size={40} />,
+  //     title: "conntect ",
+  //     desc: "Partnered with NDMC, SDMC, BSES & many leading organizations.",
+  //   },
+  //      {
+  //     icon: <ShieldCheck size={40} />,
+  //     title: "Trusted by Leaders",
+  //     desc: "Partnered with NDMC, SDMC, BSES & many leading organizations.",
+  //   },
+  // ];
 
+
+  const leftData = [
+  {
+    icon: <MdOutlineGroups size={40} />,
+    title: "Ground-Level Storytelling",
+    desc: "Taking powerful messages directly to the people.",
+  },
+  {
+    icon: <FaTheaterMasks size={40} />,
+    title: "Interactive Public Performances",
+    desc: "Engaging audiences through live theatre & participation.",
+  },
+  {
+    icon: <GiMegaphone size={40} />,
+    title: "Culture-Driven Awareness",
+    desc: "Blending traditional street theatre with modern campaigns.",
+  },
+  {
+    icon: <IoChatbubbleEllipses size={40} />,
+    title: "Voices That Create Change",
+    desc: "Performances designed to inspire action and conversation.",
+  },
+  {
+    icon: <RiUserCommunityLine size={40} />,
+    title: "Connecting Communities",
+    desc: "Bringing people together through impactful storytelling.",
+  },
+   {
+      icon: <VscWorkspaceTrusted size={40} />,
+      title: "Trusted by Leaders",
+      desc: "Trusted by brands, institutions & organizations nationwide",
+    },
+];
 
   const [form, setForm] = React.useState({
   fullName: "",
@@ -843,7 +882,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   ref={sectionRef}
   className="w-full"
   style={{
-    marginTop: "32px",
+    marginTop: "60px",
     background: "rgba(239, 233, 226, 0.35)",
   }}
 >
@@ -867,7 +906,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               <div
                 className=""
                 style={{
-                  padding: "20px 20px 40px 0px",
+                  padding: "00px 20px 40px 0px",
                 }}
               >
                 <Heading2

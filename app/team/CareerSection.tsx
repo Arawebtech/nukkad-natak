@@ -24,6 +24,9 @@ import {
 } from "lucide-react";
 
 import Heading2 from "@/components/common/Heading2";
+import { FaGraduationCap, FaTheaterMasks } from "react-icons/fa";
+import { MdPerson } from "react-icons/md";
+import { IoMdPerson } from "react-icons/io";
 
 gsap.registerPlugin(
   ScrollTrigger
@@ -315,7 +318,7 @@ const CareerSection = () => {
                 </div> */}
                 <div className="relative w-full md:w-[300px] h-[180px] overflow-hidden image-reveal">
   <Image
-    src="/images/team2.webp"
+    src="/images/our-vison.webp"
     alt="Vision"
     fill
     priority
@@ -342,7 +345,7 @@ const CareerSection = () => {
               />
 
               <p className="text-[14px] leading-[26px] text-black font-semibold max-w-[430px]">
-                We welcome passionate individuals from different backgrounds.
+                If you have the passion to perform and the courage to create change, join us.
               </p>
 
               <div
@@ -353,10 +356,10 @@ const CareerSection = () => {
               >
 
                 {[
-                  { icon: GraduationCap, title: "Students" },
+                  { icon: FaGraduationCap, title: "Students" },
                   { icon: BriefcaseBusiness, title: "Freshers" },
-                  { icon: UserRound, title: "Freelancers" },
-                  { icon: Drama, title: "Artists" },
+                  { icon: IoMdPerson , title: "Freelancers" },
+                  { icon: FaTheaterMasks, title: "Artists" },
                 ].map((item, index) => {
 
                   const Icon = item.icon;

@@ -12,6 +12,11 @@ import {
   Globe2,
 } from "lucide-react";
 import { HeadingUpdate } from "@/components/common/HeadingUpdate";
+import { GiMegaphone } from "react-icons/gi";
+import { RiUserCommunityLine } from "react-icons/ri";
+import { MdCorporateFare } from "react-icons/md";
+import { FaGraduationCap } from "react-icons/fa6";
+import { IoShareSocialOutline } from "react-icons/io5";
 
 const WorkWithUs = () => {
   const gridRef = useRef<HTMLDivElement | null>(null);
@@ -43,7 +48,7 @@ const filters = [
   {
     id: 1,
     image: "/images/services/public-awareness.jpg",
-    icon: Megaphone,
+    icon: GiMegaphone,
     title: "Public Awareness",
     desc:
       "Use live performances to spread important social and public awareness messages.",
@@ -52,7 +57,7 @@ const filters = [
   {
     id: 2,
     image: "/images/services/community-engagement.jpg",
-    icon: Users,
+    icon: RiUserCommunityLine,
     title: "Community Engagement",
     desc:
       "Connect directly with people through interactive audience participation and storytelling.",
@@ -61,7 +66,7 @@ const filters = [
   {
     id: 3,
     image: "/images/services/csr-campaigns.jpg",
-    icon: Building2,
+    icon: MdCorporateFare,
     title: "CSR Campaigns",
     desc:
       "Support CSR activities with meaningful street play and awareness performances.",
@@ -70,7 +75,7 @@ const filters = [
   {
     id: 4,
     image: "/images/services/educational-programs.jpg",
-    icon: GraduationCap,
+    icon: FaGraduationCap,
     title: "Educational Programs",
     desc:
       "Create awareness activities for schools, colleges, and educational institutions.",
@@ -79,7 +84,7 @@ const filters = [
   {
     id: 5,
     image: "/images/services/social-outreach.jpg",
-    icon: Globe2,
+    icon: IoShareSocialOutline,
     title: "Social Outreach",
     desc:
       "Reach wider audiences through impactful communication and public interaction.",

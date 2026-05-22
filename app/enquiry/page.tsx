@@ -96,10 +96,12 @@ const Enquiry = () => {
 
   }, []);
 
+  
+  
 
   return (
     <div style={styles.page}>
-      {/* HERO SECTION */}
+    
   <HeroBanner
   backgroundImage="/images/herobanner.webp"
   heading="Company Enquiry"
@@ -116,11 +118,7 @@ const Enquiry = () => {
       inform, inspire and bring real change. {" "}
 
       </span>
-        {/* and drives  {" "}
-      <span style={{ color: "#F56A28" }}>
-        change.
-      
-      </span> */}
+
     </>
   }
   text="Tell us about your campaign requirements and our team will connect with you within 24 hours."
@@ -128,6 +126,11 @@ const Enquiry = () => {
 
     <div className="website-container">
         <EnquirySection/>
+      </div>
+
+         <div className="website-container" style={{
+          paddingBottom:"60px"
+         }}>
         <WhyStreetPlays/>
       </div>
 
@@ -145,9 +148,10 @@ export default Enquiry;
 /* ================= STYLES ================= */
 
 const styles: any = {
+
   page: {
     width: "100%",
     overflow: "hidden",
-
   },
+
 }

@@ -13,33 +13,36 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Heading2 from "@/components/common/Heading2";
-import { GiModernCity, GiTheaterCurtains } from "react-icons/gi";
+import { GiIndiaGate, GiModernCity, GiTheaterCurtains } from "react-icons/gi";
 import { GoOrganization } from "react-icons/go";
 import { FaPeopleGroup } from "react-icons/fa6";
+import { MdOutlineGroups } from "react-icons/md";
+import { AiOutlineBulb } from "react-icons/ai";
+import { VscWorkspaceTrusted } from "react-icons/vsc";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const WhyChooseUs = () => {
   const leftData = [
     {
-      icon: <Users size={35} />,
-      title: "Experienced Team",
-      desc: "Skilled artists, directors & campaign managers with years of expertise.",
-    },
-    {
-      icon: <Lightbulb size={35} />,
+      icon: <AiOutlineBulb  size={35} />,
       title: "Impactful Approach",
       desc: "Creative, engaging & result-driven performances.",
     },
     {
-      icon: <Target size={35} />,
+      icon: <GiIndiaGate size={35} />,
       title: "Pan India Reach",
       desc: "Delivering campaigns across cities, towns & rural areas.",
     },
     {
-      icon: <ShieldCheck size={35} />,
+      icon: <MdOutlineGroups  size={35} />,
+      title: "Experienced Team",
+      desc: "Skilled artists, directors & campaign managers with years of expertise.",
+    },
+    {
+      icon: <VscWorkspaceTrusted size={35} />,
       title: "Trusted by Leaders",
-      desc: "Partnered with NDMC, SDMC, BSES & many leading organizations.",
+      desc: "Trusted by brands, institutions & organizations nationwide",
     },
   ];
 

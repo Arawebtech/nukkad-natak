@@ -176,7 +176,7 @@ const WhyStreetPlays = () => {
       <style jsx>{`
         .wrapper {
           width: 100%;
-          padding: 0px;
+          padding: 0px 0px 0px 0px;
         }
 
        
@@ -197,7 +197,7 @@ const WhyStreetPlays = () => {
 
           scrollbar-width: none;
 
-          padding-bottom: 20px;
+          // padding-bottom: 20px;
         }
 
         .filterScroll::-webkit-scrollbar {

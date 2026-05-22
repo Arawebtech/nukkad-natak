@@ -3,6 +3,7 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { AiFillInstagram } from "react-icons/ai";
 import { FaLinkedinIn, FaPlay } from "react-icons/fa";
 import { IoIosPause } from "react-icons/io";
 import { TiSocialFacebook } from "react-icons/ti";
@@ -44,16 +45,22 @@ export default function Footer() {
   const socials = [
     {
       icon: <TiSocialFacebook size={15} />,
-      link: "#",
+      link: "https://www.facebook.com/nukkadnatakgroup/",
     },
     {
       icon: <FaLinkedinIn size={15} />,
-      link: "#",
+      link: "https://www.linkedin.com/company/nukkadnatak-group/",
     },
-    {
-      icon: <FaPlay size={15} />,
-      link: "#",
+    // {
+    //   icon: <FaPlay size={15} />,
+    //   link: "#",
+    // },
+
+     {
+      icon: <AiFillInstagram  size={15} />,
+      link: "https://www.instagram.com/nukkadnatakcom/",
     },
+
     {
       icon: <IoIosPause size={15} />,
       link: "#",
