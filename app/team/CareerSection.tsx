@@ -393,7 +393,7 @@ const CareerSection = () => {
                 className="border border-[#b8aea5] rounded-[4px] flex gap-4 items-start bg-[#f7f2ec]"
                 style={{
                   padding: "20px",
-                  marginTop: "clamp(10px, 5vw, 60px)",
+                  marginTop: "clamp(10px, 5vw, 30px)",
                 }}
               >
 
