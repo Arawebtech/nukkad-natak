@@ -272,7 +272,7 @@ const OurStory = () => {
       ref={sectionRef}
       style={{
         display: "flex",
-        alignItems: "center",
+        alignItems: "flex-start",
         justifyContent: "space-between",
         gap: "60px",
         padding: "60px 0px 60px 0px",
@@ -322,7 +322,7 @@ const OurStory = () => {
   ref={para1Ref}
   style={{
     fontWeight: 600,
-    fontSize: "16px",
+    fontSize: "18px",
     marginBottom: "10px",
     marginTop: "24px",
     lineHeight: "1.5",
@@ -331,7 +331,7 @@ const OurStory = () => {
   <a
     href="/about"
     style={{
-      color: "inherit",
+      color: "#eb631d",
       textDecoration: "none",
     }}
   >
@@ -345,16 +345,17 @@ const OurStory = () => {
   ref={para2Ref}
   style={{
     color: "#666",
-    lineHeight: "1.8",
-    fontSize: "12px",
+    lineHeight: "1.9",
+    fontSize: "13px",
   }}
 >
-  What started as a creative initiative gradually evolved into a
-  trusted Nukkad Natak Group working on awareness campaigns, CSR
-  initiatives, educational programs, and community outreach
-  activities across India. Over the years, our team has delivered
-  60+ government projects and 150+ private campaigns while creating
-  meaningful audience connection through impactful communication.
+What started as a creative initiative gradually evolved into a trusted Nukkad Natak Group working on awareness campaigns, CSR initiatives, educational programs, and community outreach activities across India.
+
+Over the years, our team has contributed to 60+ government projects and successfully delivered 150+ private campaigns for organizations, institutions, NGOs, and leading brands. From public spaces and educational campuses to large-scale outreach initiatives, our focus has always remained the same: creating meaningful audience connection through impactful communication.
+
+The organization is led by a Bharatendu Natya Academy graduate with over 20 years of experience in theatre direction, script writing, creative planning, and end-to-end campaign execution. This strong creative background, combined with years of practical experience, has helped us build long-term trust with organizations across India.
+
+Today, NukkadNatak.com is recognized for its people-focused approach, creative execution, and ability to create awareness initiatives that feel authentic, engaging, and easy for audiences to connect with.
 </p>
       </div>
 
@@ -370,7 +371,7 @@ const OurStory = () => {
       >
         <img
           ref={imageRef}
-          src="/images/about1.webp"
+          src="/images/our-story.jpeg"
           alt="story"
           style={{
             width: "100%",

@@ -121,6 +121,7 @@ useEffect(() => {
             {/* 3. DESCRIPTION */}
             {description && (
               <p
+               className="text-shadow-black"
                 style={{
                   fontSize: "clamp(16px, 2vw, 20px)",
                   color: "#fff",
@@ -136,11 +137,13 @@ useEffect(() => {
             {/* 4. TEXT */}
             {text && (
               <p
+               className="text-shadow-black"
                 style={{
-                  fontSize: "clamp(14px, 1.5vw, 16px)",
+                  fontSize: "clamp(14px, 1.5vw, 18px)",
                   lineHeight: "1.8",
                   color: "#ddd",
                   margin: 0,
+
                 }}
               >
                 {text}

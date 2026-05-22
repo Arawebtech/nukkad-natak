@@ -133,9 +133,9 @@ export default function AwarenessBanner() {
           }}
         >
           <div>
-            <p
+            {/* <p
               style={{
-                color: "#F6A623",
+                color: "#eb631d",
                 fontSize: "clamp(12px, 2.5vw, 16px)",
                 whiteSpace: "nowrap",
                 fontWeight: 600,
@@ -143,13 +143,31 @@ export default function AwarenessBanner() {
               }}
             >
              India’s Trusted Nukkad Natak Group
-            </p>
+            </p> */}
+
+            <p
+         className="text-shadow-black"
+  style={{
+    color: "#eb631d",
+    fontSize: "clamp(12px, 2.5vw, 16px)",
+    whiteSpace: "nowrap",
+    fontWeight: 600,
+    margin: 0,
+
+    lineHeight: "28px",
+    letterSpacing: "1px",
+
+
+  }}
+>
+  India’s Trusted Nukkad Natak Group
+</p>
 
             <div
               style={{
                 width: "50px",
                 height: "2px",
-                background: "#F6A623",
+                background: "#eb631d",
                 marginTop: "10px",
                 borderRadius: "20px",
               }}
@@ -157,21 +175,23 @@ export default function AwarenessBanner() {
           </div>
 
           <h1
+           className="text-shadow-black"
             style={{
               color: "#fff",
               fontSize: "clamp(20px, 6vw, 40px)",
               lineHeight: "1.1",
               fontWeight: 800,
               margin: 0,
+
             }}
           >
            Creating Meaningful Impact Through {" "} 
-            <span style={{ color: "#F6A623" }}>
+            <span style={{ color: "#eb631d" }}>
               Awareness
             </span>
           </h1>
 
-          <p
+          {/* <p
             style={{
               color: "white",
               fontSize: "clamp(14px, 2.2vw, 18px)",
@@ -181,7 +201,25 @@ export default function AwarenessBanner() {
             }}
           >
            Trusted by government organizations, educational institutions, NGOs, and brands across India for awareness campaigns and public engagement initiatives.
-          </p>
+          </p> */}
+
+<p
+ className="text-shadow-black"
+  style={{
+    color: "white",
+    fontSize: "clamp(14px, 2.2vw, 18px)",
+    lineHeight: "30px",
+    letterSpacing: "0.8px",
+    margin: 0,
+    maxWidth: "100%",
+
+ 
+  }}
+>
+  Trusted by government organizations, educational institutions,
+  NGOs, and brands across India for awareness campaigns and public
+  engagement initiatives.
+</p>
 
           <div
             style={{

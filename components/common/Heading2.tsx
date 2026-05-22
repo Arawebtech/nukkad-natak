@@ -71,6 +71,7 @@ const Heading2 = ({
           borderBottom: "20px solid transparent",
           borderImage: "url('/images/heading-bottom.png') 30 stretch",
           paddingBottom: "8px",
+          
         }}
       >
         {title}{" "}

@@ -8,7 +8,9 @@ type BreadcrumbProps = {
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
   return (
-    <div style={styles.wrapper}>
+    <div style={styles.wrapper}
+     className="text-shadow-black"
+    >
       {items.map((item, index) => (
         <div key={index} style={styles.item}>
           {item.href ? (
@@ -32,17 +34,19 @@ const styles: any = {
     display: "flex",
     alignItems: "center",
     flexWrap: "wrap",
-    fontSize: "14px",
+    fontSize: "16px",
     color: "#ccc",
     gap: "6px",
+ 
   },
   item: {
     display: "flex",
     alignItems: "center",
   },
   link: {
-    color: "#f5c542",
+    color: "#eb631d",
     textDecoration: "none",
+    
   },
   active: {
     color: "#fff",
