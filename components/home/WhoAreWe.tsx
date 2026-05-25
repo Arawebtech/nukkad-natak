@@ -86,9 +86,9 @@ const WhoAreWe = () => {
       </div>
 
       {/* CONTENT */}
-<div ref={gridRef} className="textWrapper">
+{/* <div ref={gridRef} className="textWrapper">
 <span>
-    {/* At <a href="">NukkadNatak.com</a>, */}
+
     At <span style={{
     color:"#eb631d"
   }}>NukkadNatak.com</span>,
@@ -106,6 +106,32 @@ const WhoAreWe = () => {
 
 </span>
 
+</div> */}
+
+<div ref={gridRef} className="textWrapper">
+  <span className="whatText">
+
+    <span>
+      At <span style={{
+        color:"#eb631d"
+      }}>NukkadNatak.com</span>, we are a professional Nukkad Natak Group and IEC Activation Agency with over 15 years of experience in conducting impactful Street Play performances and awareness campaigns across India. We work with government departments, NGOs, corporate organizations, educational institutions, and brands to create meaningful public engagement through live performances that connect directly with people.
+    </span>
+
+    <br />
+    <br />
+
+    <span>
+      Our team specializes in awareness-driven communication through Nukkad Natak, IEC activities, CSR campaigns, public outreach programs, and community engagement initiatives designed for both urban and rural audiences. With artists performing in multiple regional languages including Hindi, Punjabi, Urdu, Gujarati, Marathi, Bengali, Tamil, and Telugu, we create performances that are culturally relatable, engaging, and easy to remember.
+    </span>
+
+    <br />
+    <br />
+
+    <span>
+      Every Street Play we perform is built around one goal, delivering the right message to the right audience in the most impactful and human way possible.
+    </span>
+
+  </span>
 </div>
 
       <style jsx>{`

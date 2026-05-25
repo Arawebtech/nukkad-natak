@@ -85,7 +85,7 @@ const WhatWeDo = () => {
       </div>
 
       {/* TEXT */}
-      <div ref={gridRef} className="textWrapper">
+      {/* <div ref={gridRef} className="textWrapper">
         <span className="whatText">
 
   <span>
@@ -107,7 +107,55 @@ const WhatWeDo = () => {
   </span>
 
         </span>
-      </div>
+      </div> */}
+
+
+      <div ref={gridRef} className="textWrapper">
+  <span className="whatText">
+
+    <span>
+      We provide professional Street Play and IEC Activation services designed to create awareness, encourage participation, and build stronger audience engagement on the ground level. From concept development and script writing to artist management and live execution, our team handles complete end-to-end campaign delivery across different industries and social initiatives.
+    </span>
+
+    <br />
+    <br />
+
+    <span>
+      Our work includes public awareness campaigns, CSR activities, BTL activations, educational programs, social awareness drives, rural outreach campaigns, and brand engagement activities conducted at schools, colleges, villages, marketplaces, residential communities, exhibitions, corporate events, and public spaces across India.
+    </span>
+
+    <br />
+    <br />
+
+    <span>
+      By combining storytelling, live interaction, and culturally relevant performances, we help organizations communicate important messages in a way that audiences genuinely connect with and remember.
+    </span>
+
+    <br />
+    <br />
+
+    <span>
+      Be A Part Of The Change
+    </span>
+
+    <br />
+    <br />
+
+    <span>
+      Street Play is more than just performance, it is a powerful medium for awareness, communication, and social impact. At <span style={{
+        color:"#eb631d"
+      }}>NukkadNatak.com</span>, we believe meaningful change begins when people engage with stories that feel real, relatable, and emotionally connected to their everyday lives.
+    </span>
+
+    <br />
+    <br />
+
+    <span>
+      We welcome organizations, communities, volunteers, performers, and individuals who want to support awareness campaigns, IEC activities, public engagement programs, and social initiatives through the power of Nukkad Natak and live performances. Whether you want to collaborate on a campaign, organize a Street Play event, or become a part of our creative team, every effort contributes towards creating stronger communities and positive social change across India.
+    </span>
+
+  </span>
+</div>
 
       <style jsx>{`
         .textWrapper {
