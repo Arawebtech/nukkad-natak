@@ -13,8 +13,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Nukkad Natak",
-  description: "Modern Animated Website",
+  title: "NukkadNatak.com | Street Play Nukkad Natak & Group in India",
+  description: "Nukkad Natak Group for CSR campaigns, IEC activities, government awareness programs, and street play events across India.",
 };
 
 export default function RootLayout({

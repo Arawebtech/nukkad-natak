@@ -550,20 +550,17 @@ const Home5 = () => {
     fontWeight: "500",
   }}
 >
-  Strong messages create real impact when they reach people in a genuine and relatable way. At <span style={{
-    color:"#eb631d"
-  }}>NukkadNatak.com</span>, we work with organizations, educational institutions, government departments, NGOs, and brands that want to connect with people through the power of live performance and public engagement.
-
-  <br />
-  <br />
-
-  If you are planning an awareness campaign, CSR activity, educational initiative, or audience engagement program, our team is ready to help you bring your message closer to communities through meaningful Nukkad Natak and Street Play performances.
-
-  <br />
-  <br />
-
-  We believe street theatre still has the power to move people, start conversations, and inspire positive change, especially when the performance feels honest, local, and human.
-</span>
+<span>
+      Street Play is more than just performance, it is a powerful medium for awareness, communication, and social impact. At <span style={{
+        color:"#eb631d"
+      }}>NukkadNatak.com</span>, we believe meaningful change begins when people engage with stories that feel real, relatable, and emotionally connected to their everyday lives.
+    </span>
+    <br />
+    <br />
+    <span>
+      We welcome organizations, communities, volunteers, performers, and individuals who want to support awareness campaigns, IEC activities, public engagement programs, and social initiatives through the power of Nukkad Natak and live performances. Whether you want to collaborate on a campaign, organize a Street Play event, or become a part of our creative team, every effort contributes towards creating stronger communities and positive social change across India.
+    </span>
+    </span>
           </div>
         </div>
       </div>

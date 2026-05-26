@@ -318,7 +318,7 @@ const CareerSection = () => {
                 </div> */}
                 <div className="relative w-full md:w-[300px] h-[180px] overflow-hidden image-reveal">
   <Image
-    src="/images/our-vison.webp"
+    src="/images/our-vison1.png"
     alt="Vision"
     fill
     priority

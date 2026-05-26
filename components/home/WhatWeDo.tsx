@@ -130,30 +130,6 @@ const WhatWeDo = () => {
     <span>
       By combining storytelling, live interaction, and culturally relevant performances, we help organizations communicate important messages in a way that audiences genuinely connect with and remember.
     </span>
-
-    <br />
-    <br />
-
-    <span>
-      Be A Part Of The Change
-    </span>
-
-    <br />
-    <br />
-
-    <span>
-      Street Play is more than just performance, it is a powerful medium for awareness, communication, and social impact. At <span style={{
-        color:"#eb631d"
-      }}>NukkadNatak.com</span>, we believe meaningful change begins when people engage with stories that feel real, relatable, and emotionally connected to their everyday lives.
-    </span>
-
-    <br />
-    <br />
-
-    <span>
-      We welcome organizations, communities, volunteers, performers, and individuals who want to support awareness campaigns, IEC activities, public engagement programs, and social initiatives through the power of Nukkad Natak and live performances. Whether you want to collaborate on a campaign, organize a Street Play event, or become a part of our creative team, every effort contributes towards creating stronger communities and positive social change across India.
-    </span>
-
   </span>
 </div>
 
