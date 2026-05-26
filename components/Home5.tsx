@@ -547,7 +547,9 @@ const Home5 = () => {
        <span
   style={{
     fontSize: "clamp(14px, 3vw, 16px)",
-    fontWeight: "500",
+    fontWeight: "400",
+
+      lineHeight: "24px"
   }}
 >
 <span>
