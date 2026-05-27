@@ -7,7 +7,6 @@ export const websiteApi =
     baseURL:
       process.env.NEXT_PUBLIC_API_URL,
 
-    withCredentials: true,
   });
 
 

@@ -379,7 +379,7 @@ const [openPopup, setOpenPopup] = useState(false);
         },
       });
 
-      console.log("get the data",res.data?.data)
+      console.log("get the data",res.data)
 
       setItems(res.data.data || []);
 
