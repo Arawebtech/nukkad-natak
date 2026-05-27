@@ -100,21 +100,22 @@ const AboutPage = () => {
       {/* HERO SECTION */}
   <HeroBanner
   backgroundImage="/images/herobanner.webp"
-  heading="Our Street Play Gallery "
+  heading="Work Gallery"
   breadcrumbItems={[
     { label: "Home", href: "/" },
     { label: "Gallery " },
   ]}
   description={
     <>
-      Using the power of street plays to
+      Explore powerful moments from our
       <br />
       <span style={{ color: "#F56A28" }}>
-        inform, inspire and bring real change.
+        live street theatre performances across India.
       </span>
     </>
+
   }
-  text="WI Events (nukkadnatak.com) is India's leading street play agency..."
+  text="Explore our gallery of live nukkad natak performances conducted across schools, colleges, corporate events, CSR campaigns, government awareness drives, and public spaces throughout India."
 />
 
     <div className="website-container">
