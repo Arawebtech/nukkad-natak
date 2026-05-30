@@ -719,7 +719,15 @@ const [openPopup, setOpenPopup] = useState(false);
           font-size: 16px;
           font-weight: 700;
 
-          line-height: 24px;
+         line-height: 24px;
+  min-height: 48px;
+  max-height: 48px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
         }
 
         /* LOCATION */
