@@ -1,142 +1,4 @@
-// "use client";
 
-// import Breadcrumb from "@/components/common/Breadcrumb";
-// import Heading2 from "@/components/common/Heading2";
-// import React from "react";
-// import OurStory from "./OurStory";
-// import OurMission from "./OurMission";
-// import WhyChooseUs from "./WhyChooseUs";
-// import WhatWeDo from "./WhatWeDo";
-
-
-
-
-// const AboutPage = () => {
-//   return (
-//     <div style={styles.page} >
-//       {/* HERO SECTION */}
-//       <div style={styles.hero} className="">
-//         {/* OVERLAY */}
-   
-
-//         {/* CONTENT */}
-//         <div className="website-container">
-
-//         <div style={styles.content} >
-          
-//           <Breadcrumb
-//             items={[
-//               { label: "Home", href: "/" },
-//               { label: "About Us" },
-//             ]}
-//           />
-
-//          <Heading2 title="About"  color="white"/>
-
-//           <p style={styles.desc}>
-//            Using the power of street plays to  
-//            <br /><span style={{
-//             color:"#F56A28"
-//            }}>
-//             inform, inspire and bring real change.
-//            </span>
-//           </p>
-
-//           <p style={styles.text}>
-//          WI Events (nukkadnatak.com) is India's leading street play agency,
-// specializing in awareness campaigns and brand activations
-// that connect with people at the heart.
-//           </p>
-//         </div>
-//                 </div>
-
-//       </div>
-
-//     <div className="website-container">
-//         <OurStory/>
-//     </div>
-//         <WhyChooseUs/>
-//     <div className="website-container">
-
-//         <OurMission/>
-//         <WhatWeDo/>
-//     </div>
-//         <style jsx>{`
-//   @media (max-width: 768px) {
-//     .hero-mobile {
-//       min-height: 400px !important;
-//       padding-top: 70px !important;
-//       height: auto !important;
-//     }
-//   }
-// `}</style>
-//     </div>
-    
-//   );
-// };
-
-// export default AboutPage;
-
-// /* ================= STYLES ================= */
-
-// const styles: any = {
-//   page: {
-//     width: "100%",
-//     minHeight: "",
-//     fontFamily: "Arial, sans-serif",
-
-//   },
-
-//   hero: {
-//     position: "relative",
-//     width: "100%",
-// minHeight: "700px",
-// paddingTop:"100px",
-//     display: "flex",
-//     alignItems: "start",
-//             backgroundImage:
-//       "url('/images/about.webp')",
-//     backgroundSize: "cover",
-//     backgroundPosition: "center",
-//      backgroundRepeat: "no-repeat",
-
-//   },
-
-// //   overlay: {
-// //     position: "absolute",
-// //     inset: 0,
-// //     background:
-// //       "linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.4))",
-// //   },
-
-//   content: {
-//     position: "relative",
-//     zIndex: 2,
-//     maxWidth: "650px",
-//     color: "#fff",
-//   },
-
-//   title: {
-//     fontSize: "clamp(40px, 5vw, 70px)",
-//     fontWeight: "800",
-//     margin: "15px 0",
-//     color: "#fff",
-//         maxWidth: "650px",
-//   },
-
-//   desc: {
-//     fontSize: "clamp(16px, 2vw, 20px)",
-//     color: "#fff",
-//     fontWeight: 500,
-//     marginBottom: "20px",
-//   },
-
-//   text: {
-//     fontSize: "clamp(14px, 1.5vw, 16px)",
-//     lineHeight: "1.7",
-//     color: "#ddd",
-//   },
-// };
 
 
 
@@ -151,12 +13,10 @@ import gsap from "gsap";
 import Breadcrumb from "@/components/common/Breadcrumb";
 import Heading2 from "@/components/common/Heading2";
 
-import OurStory from "./OurStory";
-import OurMission from "./OurMission";
-import WhyChooseUs from "./WhyChooseUs";
-import WhatWeDo from "./WhatWeDo";
-import FaqPage from "./FaqPage";
+
+import BrandFaqPage from "./BrandFaqPage";
 import HeroBanner from "@/components/common/HeroBanner";
+import BrandPromotionContent from "./Brandpromotioncontent";
 
 
 const AboutPage = () => {
@@ -265,23 +125,13 @@ const AboutPage = () => {
   text="As a trusted Nukkad Natak agency in India, (nukkadnatak.com) specializes in street play campaigns, public awareness programs and brand activations for government and private organizations"
 />
 
-      {/* STORY */}
-       <div className="website-container">
-        <OurStory />
-      </div>
+    
 
    
-      <WhyChooseUs />
-
    
-      <div className="website-container">
-        <OurMission />
-      {/*
-        <WhatWeDo />
-        */}
-      </div> 
 
-      <FaqPage/>
+      {/* <BrandFaqPage/> */}
+      <BrandPromotionContent/>
 <div className="website-container">
 
 </div>

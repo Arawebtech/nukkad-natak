@@ -508,6 +508,7 @@ const Services = () => {
             max-width: 100px;
             height: 100px;
             object-fit:contain;
+              width: 95%;
           }
 
           .title {
