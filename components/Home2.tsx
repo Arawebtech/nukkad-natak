@@ -190,93 +190,101 @@ const Home2 = () => {
   const logos = [
     {
       img: "/icons/1.png",
-      alt: "Client Logo 1",
+      alt: "Indian Railways",
     },
     {
       img: "/icons/2.png",
-      alt: "Client Logo 2",
+      alt: "Tata Motors",
     },
     {
       img: "/icons/3.png",
-      alt: "Client Logo 3",
+      alt: "Bharat Potroleum",
     },
     {
       img: "/icons/4.png",
-      alt: "Client Logo 4",
+      alt: "Petroleum and Natural Gas",
     },
     {
       img: "/icons/5.png",
-      alt: "Client Logo 5",
+      alt: "BSES Rajdhani Power Limited",
     },
     {
       img: "/icons/6.png",
-      alt: "Client Logo 6",
+      alt: "Confederation of indian Industry",
     },
     {
       img: "/icons/7.png",
-      alt: "Client Logo 7",
+      alt: "Delhi Police",
     },
     {
       img: "/icons/8.png",
-      alt: "Client Logo 8",
+      alt: "Hindustan Petroleum",
     },
     {
       img: "/icons/9.png",
-      alt: "Client Logo 9",
+      alt: "Honda",
     },
     {
       img: "/icons/10.png",
-      alt: "Client Logo 10",
+      alt: "Indian Post",
     },
     {
       img: "/icons/11.png",
-      alt: "Client Logo 11",
+      alt: "Indian Oil",
     },
     {
       img: "/icons/12.png",
-      alt: "Client Logo 12",
+      alt: "Mother Dairy",
     },
     {
       img: "/icons/13.png",
-      alt: "Client Logo 13",
+      alt: "Ministry of jal shakti",
     },
     {
       img: "/icons/14.png",
-      alt: "Client Logo 14",
+      alt: "Micro,Small Medium Enterprises",
     },
     {
       img: "/icons/15.png",
-      alt: "Client Logo 15",
+      alt: "N B C C",
     },
     {
       img: "/icons/16.png",
-      alt: "Client Logo 16",
+      alt: "NPCC",
     },
     {
       img: "/icons/17.png",
-      alt: "Client Logo 17",
+      alt: "Oil India Limited",
     },
     {
       img: "/icons/18.png",
-      alt: "Client Logo 18",
+      alt: "Bureau Of Indian Standards",
     },
     {
       img: "/icons/19.png",
-      alt: "Client Logo 19",
+      alt: "PCRA",
     },
     {
       img: "/icons/20.png",
-      alt: "Client Logo 20",
+      alt: "Sab Padhe Sab Badhe",
     },
         {
       img: "/icons/21.png",
-      alt: "Client Logo 21",
+      alt: "Municipal coporation of delhi",
+    },
+         {
+      img: "/icons/22.png",
+      alt: "N S D C",
+    },
+         {
+      img: "/icons/23.png",
+      alt: "Gajia Bad",
     },
   ];
 
   // AUTO SPLIT ROWS
   const rows = useMemo(() => {
-    const chunkSize = 11;
+    const chunkSize = 12;
 
     const result = [];
 

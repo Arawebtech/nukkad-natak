@@ -6,17 +6,16 @@
 
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import  { useEffect, useRef } from "react";
 
 import gsap from "gsap";
 
-import Breadcrumb from "@/components/common/Breadcrumb";
-import Heading2 from "@/components/common/Heading2";
 
 
 import BrandFaqPage from "./BrandFaqPage";
 import HeroBanner from "@/components/common/HeroBanner";
 import BrandPromotionContent from "./Brandpromotioncontent";
+import './style.css'
 
 
 const AboutPage = () => {
@@ -107,22 +106,22 @@ const AboutPage = () => {
   
 
 <HeroBanner
-  backgroundImage="/images/herobanner.webp"
-  heading="About Us"
+  backgroundImage="/images/brand-banner1.jpeg"
+  heading="Brand Promotion "
   breadcrumbItems={[
     { label: "Home", href: "/" },
-    { label: "About Us" },
+    { label: "", href: "/services" },
+    { label: "Brand Promotion" },
   ]}
   description={
     <>
-      Powerful Street Plays 
+      Promote Your <span style={{ color: "#F56A28" }}>Brand</span>. Engage Your{" "}
+      <span style={{ color: "#F56A28" }}>Audience</span>.
       <br />
-      <span style={{ color: "#F56A28" }}>
-        That Drive Awareness, Engagement & Real Impact
-      </span>
+      Create Lasting <span style={{ color: "#F56A28" }}>Impact</span>.
     </>
   }
-  text="As a trusted Nukkad Natak agency in India, (nukkadnatak.com) specializes in street play campaigns, public awareness programs and brand activations for government and private organizations"
+  text="We create powerful, engaging and entertaining street play campaigns that help brands connect with their target audience in the most innovative and memorable way. Our Nukkad Natak performances drive brand awareness, customer engagement and meaningful interactions that leave a lasting impression."
 />
 
     
@@ -130,11 +129,12 @@ const AboutPage = () => {
    
    
 
-      {/* <BrandFaqPage/> */}
-      <BrandPromotionContent/>
+
 <div className="website-container">
+      <BrandPromotionContent/>
 
 </div>
+      <BrandFaqPage/>
 
       {/* RESPONSIVE CSS */}
       <style jsx>{`

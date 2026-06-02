@@ -100,6 +100,20 @@ useEffect(() => {
           overflow: "hidden",
         }}
       >
+
+          <div
+    style={{
+      position: "absolute",
+      inset: 0,
+      backgroundImage: "url('/images/transparent.png')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      zIndex: 0,
+      pointerEvents: "none",
+    }}
+  />
+
         <div className="website-container-without-img">
           <div
             ref={contentRef}

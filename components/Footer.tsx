@@ -30,8 +30,8 @@ export default function Footer() {
       link: "/enquiry",
     },
     {
-      title: "Contact Us",
-      link: "/enquiry",
+      title: "Brand Promotion",
+      link: "/brand",
     },
   ];
   const services = [

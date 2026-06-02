@@ -1,301 +1,3 @@
-// "use client";
-
-// import React, { useEffect, useRef, useState } from "react";
-// import gsap from "gsap";
-// import { Circle, MapPin, Search } from "lucide-react";
-
-// const GalleryItems = () => {
-//   const gridRef = useRef<HTMLDivElement | null>(null);
-//   const sectionRef = useRef<HTMLDivElement | null>(null);
-
-//   const [activeFilter, setActiveFilter] = useState("All");
-
-//   const filters = [
-//     { title: "All", image: "/images/gallery2.png" },
-//     { title: "Government Campaigns", image: "/images/gallery2.png" },
-//     { title: "Corporate Awareness", image: "/images/gallery3.png" },
-//     { title: "CSR & College Activations", image: "/images/gallery2.png" },
-//     { title: "Election Awareness", image: "/images/gallery3.png" },
-//   ];
-
-//   const items = [
-//     {
-//       image: "/images/home9.webp",
-//       bgImage: "/images/homeblack1.png",
-//       title: "Swachh Bharat Drive",
-//       category: "Government Campaigns",
-//       location: "Bangalore",
-//     },
-//     {
-//       image: "/images/home10.webp",
-//       bgImage: "/images/homeblack1.png",
-//       title: "BSES Energy Awareness",
-//       category: "Government Campaigns",
-//       location: "Delhi",
-//     },
-//     {
-//       image: "/images/home11.webp",
-//       bgImage: "/images/homeblack1.png",
-//       title: "Election Awareness Drive",
-//       category: "Government Campaigns",
-//       location: "Mumbai",
-//     },
-//     {
-//       image: "/images/home11.webp",
-//       bgImage: "/images/homeblack1.png",
-//       title: "Election Awareness Drive 2",
-//       category: "Government Campaigns",
-//       location: "Mumbai",
-//     },
-//   ];
-
-//   // ✅ GSAP ANIMATION (REUSABLE STYLE)
-//   useEffect(() => {
-//     if (!gridRef.current) return;
-
-//     const ctx = gsap.context(() => {
-//       gsap.fromTo(
-//         gridRef.current.children,
-//         { y: 50, opacity: 0, scale: 0.95 },
-//         {
-//           y: 0,
-//           opacity: 1,
-//           scale: 1,
-//           duration: 0.8,
-//           stagger: 0.12,
-//           ease: "power3.out",
-//         }
-//       );
-//     }, sectionRef);
-
-//     return () => ctx.revert();
-//   }, [activeFilter]);
-
-//   // ✅ FILTER LOGIC
-//   const filteredItems =
-//     activeFilter === "All"
-//       ? items
-//       : items.filter((i) => i.category === activeFilter);
-
-//   return (
-//     <div ref={sectionRef} className="wrapper">
-//       {/* ================= FILTER BAR ================= */}
-//       <div className="filterWrapper">
-//         <div className="filterScroll">
-//           {filters.map((item, index) => {
-//             const isActive = activeFilter === item.title;
-
-//             return (
-//               <div
-//                 key={index}
-//                 className={`filterCard ${isActive ? "active" : ""}`}
-//                 onClick={() => setActiveFilter(item.title)}
-//               >
-//                 <img src={item.image} className="filterImg" />
-//                 <div className={`filterTitle ${isActive ? "activeTitle" : ""}`}>
-//                   {item.title}
-//                 </div>
-//               </div>
-//             );
-//           })}
-//         </div>
-//       </div>
-
-//       {/* ================= GRID ================= */}
-//       <div className="mainBox">
-//         <div ref={gridRef} className="grid">
-//           {filteredItems.map((item, index) => (
-//             <div key={index} className="card">
-//               <div className="cardInner">
-//                 <img src={item.image} className="cardImg" />
-
-//                 {/* OVERLAY */}
-//                 <div className="overlay">
-//                   <Search size={34} />
-//                   <button className="viewBtn">View More</button>
-//                 </div>
-
-//                 {/* BOTTOM */}
-//                 <div
-//                   className="bottom"
-//                   style={{ backgroundImage: `url(${item.bgImage})` }}
-//                 >
-//                   <div>
-//                     <h3>{item.title}</h3>
-//                     <p>
-//                       <MapPin size={12} /> {item.location}
-//                     </p>
-//                   </div>
-
-//                   <span className="tag">
-//                     <Circle size={10} /> {item.category}
-//                   </span>
-//                 </div>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-
-//       {/* ================= STYLE ================= */}
-//       <style jsx>{`
-//         .wrapper {
-//           width: 100%;
-//         }
-
-//         /* ===== FILTER MOBILE SCROLL ===== */
-//         .filterWrapper {
-//           width: 100%;
-//           padding: 15px 0;
-//         }
-
-//         .filterScroll {
-//           display: flex;
-//           gap: 12px;
-//           overflow-x: auto;
-//           padding: 10px 15px;
-//           scrollbar-width: none;
-//         }
-
-//         .filterScroll::-webkit-scrollbar {
-//           display: none;
-//         }
-
-//         .filterCard {
-//           flex: 0 0 auto;
-//           text-align: center;
-//           cursor: pointer;
-//           padding: 10px;
-//           border-radius: 12px;
-//           transition: 0.3s;
-//         }
-
-//         .filterImg {
-//           width: 90px;
-//           height: auto;
-//         }
-
-//         .filterTitle {
-//           font-size: 13px;
-//           margin-top: 8px;
-//           font-weight: 600;
-//         }
-
-//         .activeTitle {
-//           background: #f97316;
-//           color: #fff;
-//           padding: 6px 10px;
-//           border-radius: 8px;
-//         }
-
-//         /* ===== GRID ===== */
-//         .mainBox {
-//           padding: 30px 15px;
-//         }
-
-//         .grid {
-//           display: grid;
-//           grid-template-columns: 1fr;
-//           gap: 20px;
-//         }
-
-//         .cardInner {
-//           position: relative;
-//           overflow: hidden;
-//           border-radius: 14px;
-//         }
-
-//         .cardImg {
-//           width: 100%;
-//           transition: 0.4s;
-//         }
-
-//         .overlay {
-//           position: absolute;
-//           inset: 0;
-//           background: linear-gradient(
-//             to top,
-//             rgba(0, 0, 0, 0.8),
-//             rgba(0, 0, 0, 0.2)
-//           );
-//           display: flex;
-//           flex-direction: column;
-//           justify-content: center;
-//           align-items: center;
-//           color: #fff;
-//           transform: translateY(100%);
-//           transition: 0.4s;
-//         }
-
-//         .cardInner:hover .overlay {
-//           transform: translateY(0);
-//         }
-
-//         .cardInner:hover .cardImg {
-//           transform: scale(1.05);
-//         }
-
-//         .viewBtn {
-//           margin-top: 10px;
-//           padding: 6px 18px;
-//           background: #f97316;
-//           border: none;
-//           color: #fff;
-//           border-radius: 8px;
-//           cursor: pointer;
-//         }
-
-//         .bottom {
-//           display: flex;
-//           justify-content: space-between;
-//           align-items: end;
-//           padding: 10px;
-//           background-size: cover;
-//           color: #fff;
-//         }
-
-//         .bottom h3 {
-//           font-size: 14px;
-//         }
-
-//         .bottom p {
-//           font-size: 11px;
-//           display: flex;
-//           align-items: center;
-//           gap: 4px;
-//         }
-
-//         .tag {
-//           font-size: 10px;
-//           background: #f97316;
-//           padding: 6px 10px;
-//           border-radius: 6px;
-//           display: flex;
-//           align-items: center;
-//           gap: 4px;
-//         }
-
-//         /* ===== RESPONSIVE ===== */
-//         @media (min-width: 768px) {
-//           .grid {
-//             grid-template-columns: repeat(2, 1fr);
-//           }
-//         }
-
-//         @media (min-width: 1024px) {
-//           .grid {
-//             grid-template-columns: repeat(4, 1fr);
-//           }
-
-//           .filterScroll {
-//             justify-content: center;
-//             overflow-x: hidden;
-//           }
-//         }
-//       `}</style>
-//     </div>
-//   );
-// };
 
 
 
@@ -307,8 +9,7 @@ import {
   Circle,
   MapPin,
   Search,
-  ChevronLeft,
-  ChevronRight,
+
   ArrowLeft,
   ArrowRight,
 } from "lucide-react";
@@ -318,43 +19,14 @@ import { websiteApi } from "../api/website.api";
 import GalleryPopup from "./GalleryPopup";
 import Loader from "@/components/common/Loader";
 
-  const staticData = [
-    {
-      image: "/images/home9.webp",
-      bgImage: "/images/homeblack1.png",
-      title: "Swachh Bharat Drive",
-      category: "Government Campaigns",
-      location: "Bangalore",
-    },
-    {
-      image: "/images/home10.webp",
-      bgImage: "/images/homeblack1.png",
-      title: "BSES Energy Awareness",
-      category: "Government Campaigns",
-      location: "Delhi",
-    },
-    {
-      image: "/images/home11.webp",
-      bgImage: "/images/homeblack1.png",
-      title: "Election Awareness Drive",
-      category: "Government Campaigns",
-      location: "Mumbai",
-    },
-    {
-      image: "/images/home11.webp",
-      bgImage: "/images/homeblack1.png",
-      title: "Election Awareness Drive 2",
-      category: "Government Campaigns",
-      location: "Mumbai",
-    },
-  ];
+
 
 const GalleryItems = () => {
   const gridRef = useRef<HTMLDivElement | null>(null);
   const sectionRef = useRef<HTMLDivElement | null>(null);
 
   const [items, setItems] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
@@ -399,16 +71,15 @@ const [openPopup, setOpenPopup] = useState(false);
 
   /* ================= SEARCH DEBOUNCE ================= */
 
-  useEffect(() => {
-    const delay = setTimeout(() => {
-      setCurrentPage(1);
-      fetchGallery(1, search);
-    }, 500);
+  // useEffect(() => {
+  //   const delay = setTimeout(() => {
+  //     setCurrentPage(1);
+  //     fetchGallery(1, search);
+  //   }, 500);
 
-    return () => clearTimeout(delay);
-  }, [search]);
+  //   return () => clearTimeout(delay);
+  // }, [search]);
 
-  /* ================= GSAP ================= */
 
   useEffect(() => {
     if (!gridRef.current) return;
@@ -435,7 +106,18 @@ const [openPopup, setOpenPopup] = useState(false);
     return () => ctx.revert();
   }, [currentPage]);
 
-  const displayItems = items.length > 0 ? items : staticData;
+  const displayItems = items.length > 0 ? items : [];
+
+
+  useEffect(() => {
+  if (!loading && items.length === 0) {
+    const timer = setTimeout(() => {
+      window.location.href = "/";
+    }, 800);
+
+    return () => clearTimeout(timer);
+  }
+}, [loading, items]);
 
   return (
     <div ref={sectionRef}>
@@ -453,11 +135,23 @@ const [openPopup, setOpenPopup] = useState(false);
       <div className="main-box">
         {/* GRID */}
 
-        <div ref={gridRef} className="responsiveGrid">
+       {!loading && displayItems.length === 0 ? (
+  <div className="emptyState">
+    <h2>No Gallery Data Found</h2>
+    <p>Currently there are no gallery items available.</p>
+
+    <button
+      onClick={() => (window.location.href = "/")}
+      className="homeBtn"
+    >
+      Go to Home
+    </button>
+  </div>
+) : ( <div ref={gridRef} className="responsiveGrid">
       {displayItems?.map((item, index) => (
             <div key={index} className="gridItem">
               <div className="content">
-                {/* IMAGE */}
+              
 <img
   src={
     item.coverImage?.url ||
@@ -517,7 +211,7 @@ const [openPopup, setOpenPopup] = useState(false);
               </div>
             </div>
           ))}
-        </div>
+        </div>)}
 
         {/* PAGINATION */}
 
