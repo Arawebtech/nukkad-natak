@@ -350,10 +350,10 @@ const Home2 = () => {
       {/* HEADING */}
       <div>
         <HeadingUpdate
-          title="Our"
+          title="Trusted By"
           color="black"
           title2={true}
-          title2Text="Client's"
+          title2Text="Industry Leaders"
           mobileSize="25px"
           desktopSize="30px"
         />
