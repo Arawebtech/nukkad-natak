@@ -205,7 +205,7 @@ style={{
   }}
 >
   <RiWhatsappFill color="#25D366" size={20} />
-  WhatsApp Me
+  Chat on WhatsApp
 </Link>
 
                 {/* RIGHT SIDE */}

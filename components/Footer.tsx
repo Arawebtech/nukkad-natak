@@ -52,10 +52,7 @@ export default function Footer() {
       icon: <FaLinkedinIn size={15} />,
       link: "https://www.linkedin.com/company/nukkadnatak-group/",
     },
-    // {
-    //   icon: <FaPlay size={15} />,
-    //   link: "#",
-    // },
+ 
 
      {
       icon: <AiFillInstagram  size={15} />,
@@ -505,14 +502,14 @@ export default function Footer() {
     <div
       style={{
         width: "26px",
-        minWidth: "26px",
+    
         display: "flex",
-        alignItems: "flex-start",
-        justifyContent: "flex-start",
+        // alignItems: "flex-start",
+        // justifyContent: "flex-start",
       }}
     >
       <MapPin
-        size={18}
+        size={17}
         style={{
           color: "#EB631D",
           marginTop: "2px",
@@ -527,7 +524,7 @@ export default function Footer() {
         lineHeight: "18px",
       }}
     >
-      {/* New Delhi, India */}
+   
       Office No 11, 1st Floor, Pocket 13, Sector 24, Rohini, New Delhi, 110085
     </span>
   </div>
