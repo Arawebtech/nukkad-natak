@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Mail, MessageCircle, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { RiWhatsappFill } from "react-icons/ri";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -177,6 +178,35 @@ style={{
          );
 })}
                 </div>
+
+                <Link
+  href="https://wa.me/919310996542"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "10px",
+    background: "transparent",
+    color: "#fff",
+    padding: "8px 20px",
+    borderRadius: "6px",
+    border :"1px solid gray",
+    textDecoration: "none",
+    fontSize: "14px",
+    fontWeight: 600,
+    transition: "all 0.3s ease",
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = "translateY(-2px)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = "translateY(0)";
+  }}
+>
+  <RiWhatsappFill color="#25D366" size={20} />
+  WhatsApp Me
+</Link>
 
                 {/* RIGHT SIDE */}
                 {/* <div
@@ -592,8 +622,8 @@ style={{
           <Mail size={18} />
         </Link>
 
-        <Link
-          href="#"
+                   <Link
+  href="https://wa.me/919310996542"
           style={{
             display: "flex",
             alignItems: "center",

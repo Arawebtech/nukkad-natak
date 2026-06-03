@@ -6,6 +6,7 @@ import Link from "next/link";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaLinkedinIn, FaPlay } from "react-icons/fa";
 import { IoIosPause } from "react-icons/io";
+import { RiWhatsappFill } from "react-icons/ri";
 import { TiSocialFacebook } from "react-icons/ti";
 
 export default function Footer() {
@@ -62,8 +63,8 @@ export default function Footer() {
     },
 
     {
-      icon: <IoIosPause size={15} />,
-      link: "#",
+      icon: <RiWhatsappFill size={15} />,
+      link: " https://wa.me/919310996542",
     },
   ];
 
@@ -526,7 +527,8 @@ export default function Footer() {
         lineHeight: "18px",
       }}
     >
-      New Delhi, India
+      {/* New Delhi, India */}
+      Office No 11, 1st Floor, Pocket 13, Sector 24, Rohini, New Delhi, 110085
     </span>
   </div>
 </div>
@@ -543,6 +545,8 @@ export default function Footer() {
                 <Link
                   href={item.link}
                   key={index}
+                      target="_blank"
+    rel="noopener noreferrer"
                   style={{
                     position: "relative",
                     width: "40px",
