@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { HeadingUpdate } from "./common/HeadingUpdate";
+import { HeadingUpdate, HeadingUpdateLongText } from "./common/HeadingUpdate";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -79,7 +79,16 @@ const CommonContentSection = ({
   return (
     <section ref={sectionRef}>
       <div ref={headingRef}>
-        <HeadingUpdate
+        {/* <HeadingUpdate
+          title={title}
+          color={color}
+          title2={true}
+          title2Text={title2Text}
+          mobileSize="25px"
+          desktopSize="30px"
+        /> */}
+
+          <HeadingUpdateLongText
           title={title}
           color={color}
           title2={true}
@@ -87,6 +96,7 @@ const CommonContentSection = ({
           mobileSize="25px"
           desktopSize="30px"
         />
+        
       </div>
 
       <div ref={contentRef} className="textWrapper">

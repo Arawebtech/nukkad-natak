@@ -13,7 +13,7 @@ interface HeroBannerProps {
     href?: string;
   }[];
 
-  heading: string;
+  heading?: string;
   description?: React.ReactNode;
   text?: string;
 

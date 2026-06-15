@@ -622,7 +622,7 @@ style={{
           <Mail size={18} />
         </Link>
 
-                   <Link
+                   {/* <Link
   href="https://wa.me/919310996542"
           style={{
             display: "flex",
@@ -653,7 +653,35 @@ style={{
           }}
         >
           <MessageCircle size={18} />
-        </Link>
+        </Link> */}
+                        <Link
+  href="https://wa.me/919310996542"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "10px",
+    background: "transparent",
+    color: "#fff",
+    padding: "8px 20px",
+    borderRadius: "6px",
+    border :"1px solid gray",
+    textDecoration: "none",
+    fontSize: "14px",
+    fontWeight: 600,
+    transition: "all 0.3s ease",
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = "translateY(-2px)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = "translateY(0)";
+  }}
+>
+  <RiWhatsappFill color="#25D366" size={20} />
+  Chat on WhatsApp
+</Link>
       </div>
     </div>
   </div>

@@ -12,7 +12,9 @@ import Home5 from "@/components/Home5";
 import WhatWeDo from "@/components/home/WhatWeDo";
 import WhoAreWe from "@/components/home/WhoAreWe";
 import WhyStreetPlays from "./enquiry/WhyStreetPlays";
+import ServicesPage from "./services/page";
 
+// export default function HomeClient({ services }: any) {
 export default function HomeClient() {
 
   const titleRef = useRef<HTMLHeadingElement | null>(null);
@@ -64,7 +66,8 @@ export default function HomeClient() {
    </div>
    <Home2/>
    <div className="website-container">
-   <Services />
+   {/* <Services /> */}
+       <ServicesPage  />
      </div>
 
         <div className="website-container">

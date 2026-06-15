@@ -146,6 +146,31 @@
 // }
 
 
+// with service dynaic 
+// export const dynamic = "force-dynamic";
+
+// import HomeClient from "./HomeClient";
+
+// async function getServices() {
+//   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/services`, {
+//     cache: "no-store",
+//   });
+
+//   if (!res.ok) {
+//     throw new Error("Failed to fetch services");
+//   }
+
+//   return res.json();
+// }
+
+// export default async function Page() {
+//   const {data} = await getServices();
+
+//   console.log("get the data",data)
+
+//   return <HomeClient services={data ?? []}/>;
+// }
+
 
 export const dynamic = "force-dynamic";
 

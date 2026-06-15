@@ -12,13 +12,14 @@ import gsap from "gsap";
 
 
 
-import BrandFaqPage from "./BrandFaqPage";
+import GovernmentFaqPage from "./GovernmentFaqPage";
 import HeroBanner from "@/components/common/HeroBanner";
-import BrandPromotionContent from "./Brandpromotioncontent";
+
 import './style.css'
+import GovernmentContent from "./Governmentcontent";
 
 
-const AboutPage = () => {
+const Page = () => {
   const heroRef = useRef<HTMLDivElement | null>(null);
   const contentRef = useRef<HTMLDivElement | null>(null);
 
@@ -105,23 +106,23 @@ const AboutPage = () => {
     <div style={styles.page}>
   
 
-<HeroBanner
-  backgroundImage="/images/brand-banner1.jpeg"
-  heading="Brand Promotion "
+<HeroBanner backgroundImage="/images/governmet-banner1.jpeg"
+  heading="Government Awareness"
   breadcrumbItems={[
     { label: "Home", href: "/" },
-    { label: "", href: "/services" },
-    { label: "Brand Promotion" },
+    // { label: "", href: "/" },
+    { label: "Government Awareness" },
   ]}
   description={
     <>
-      Promote Your <span style={{ color: "#F56A28" }}>Brand</span>. Engage Your{" "}
+      {/* Promote Your <span style={{ color: "#F56A28" }}>Brand</span>. Engage Your{" "}
       <span style={{ color: "#F56A28" }}>Audience</span>.
       <br />
-      Create Lasting <span style={{ color: "#F56A28" }}>Impact</span>.
+      Create Lasting <span style={{ color: "#F56A28" }}>Impact</span>. */}
+      Inform. <span style={{ color: "#F56A28" }}>Educate</span>. Empower. Building a Better Tomorrow Together.
     </>
   }
-  text="We create powerful, engaging and entertaining street play campaigns that help brands connect with their target audience in the most innovative and memorable way. Our Nukkad Natak performances drive brand awareness, customer engagement and meaningful interactions that leave a lasting impression."
+  text="Our street plays help government organizations spread awareness on important schemes, policies and social issues in the most engaging and effective way."
 />
 
     
@@ -131,34 +132,19 @@ const AboutPage = () => {
 
 
 <div className="website-container">
-      <BrandPromotionContent/>
+      <GovernmentContent/>
 
 </div>
-      <BrandFaqPage/>
+      <GovernmentFaqPage/>
 
-
-      <style jsx>{`
-        .hero-mobile {
-          overflow: hidden;
-        }
-
-        @media (max-width: 768px) {
-          .hero-mobile {
-            min-height: 500px !important;
-            height: auto !important;
-
-            padding-top: 90px !important;
-            // padding-bottom: 70px !important;
-
-            background-position: center !important;
-          }
-        }
-      `}</style>
     </div>
   );
 };
 
-export default AboutPage;
+export default Page;
+
+
+
 
 /* ================= STYLES ================= */
 

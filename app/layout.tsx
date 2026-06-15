@@ -80,11 +80,69 @@
 // }
 
 
+// import type { Metadata } from "next";
+// import { Inter } from "next/font/google";
+// import "./globals.css";
+// import AppShell from "@/components/AppShell";
+// import Script from "next/script";
+
+// const inter = Inter({
+//   subsets: ["latin"],
+//   variable: "--font-inter",
+// });
+
+// export const metadata: Metadata = {
+//   title: "NukkadNatak.com - Street Play & Nukkad Natak Group in India",
+//   description:
+//     "Nukkad Natak Group for CSR campaigns, IEC activities, government awareness programs, and street play events across India.",
+// };
+
+// export default function RootLayout({
+//   children,
+// }: {
+//   children: React.ReactNode;
+// }) {
+//   return (
+//     <html lang="en">
+//       <body
+//         className={inter.className}
+//         style={{
+//           overflowX: "hidden",
+//           paddingTop: "70px",
+//         }}
+//       >
+//         {/* ✅ GA4 Script */}
+//         <Script
+//           src="https://www.googletagmanager.com/gtag/js?id=G-JV9B8DHYNH"
+//           strategy="afterInteractive"
+//         />
+
+//         <Script id="ga4-script" strategy="afterInteractive">
+//           {`
+//             window.dataLayer = window.dataLayer || [];
+//             function gtag(){dataLayer.push(arguments);}
+
+//             gtag('js', new Date());
+//             gtag('config', 'G-JV9B8DHYNH');
+//           `}
+//         </Script>
+
+//         {/* Your App */}
+//         <AppShell>{children}</AppShell>
+//       </body>
+//     </html>
+//   );
+// }
+
+
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import AppShell from "@/components/AppShell";
 import Script from "next/script";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import TrafficTracker from "@/components/common/TrafficTracker";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -103,15 +161,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body
-        className={inter.className}
-        style={{
-          overflowX: "hidden",
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}   style={{
+                   overflowX: "hidden",
           paddingTop: "70px",
-        }}
-      >
-        {/* ✅ GA4 Script */}
+         }} >
+        
+        {/* GA4 */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-JV9B8DHYNH"
           strategy="afterInteractive"
@@ -121,14 +177,22 @@ export default function RootLayout({
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
-
             gtag('js', new Date());
             gtag('config', 'G-JV9B8DHYNH');
           `}
         </Script>
 
-        {/* Your App */}
-        <AppShell>{children}</AppShell>
+        {/* HEADER (server-safe) */}
+        <Header />
+
+        {/* PAGE CONTENT */}
+        {children}
+
+        {/* FOOTER (server-safe) */}
+        <Footer />
+
+        {/* TRACKER (client only if needed) */}
+        <TrafficTracker />
       </body>
     </html>
   );

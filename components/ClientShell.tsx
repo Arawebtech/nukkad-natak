@@ -1,13 +1,14 @@
 "use client";
 
+import type { ReactNode } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TrafficTracker from "@/components/common/TrafficTracker";
 
-export default function AppShell({ children }: { children: React.ReactNode }) {
+export default function ClientShell({ children }: { children: ReactNode }) {
   return (
     <>
-      <Header />
+      <Header/>
       <TrafficTracker />
       {children}
       <Footer />

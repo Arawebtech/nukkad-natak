@@ -310,7 +310,7 @@ import {
  HeartHandshake,
 } from "lucide-react";
 
-import { useIconHover } from "@/hooks/useIconHover";
+
 import { HeadingUpdate } from "./common/HeadingUpdate";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -320,7 +320,7 @@ const Home5 = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
-  const iconRef = useIconHover();
+
 
   const [activeIndex, setActiveIndex] = useState(0);
 
