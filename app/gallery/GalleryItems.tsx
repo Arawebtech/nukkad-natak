@@ -69,16 +69,7 @@ const [openPopup, setOpenPopup] = useState(false);
     fetchGallery(currentPage, search);
   }, [currentPage]);
 
-  /* ================= SEARCH DEBOUNCE ================= */
 
-  // useEffect(() => {
-  //   const delay = setTimeout(() => {
-  //     setCurrentPage(1);
-  //     fetchGallery(1, search);
-  //   }, 500);
-
-  //   return () => clearTimeout(delay);
-  // }, [search]);
 
 
   useEffect(() => {
