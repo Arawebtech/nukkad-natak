@@ -13,6 +13,7 @@ import WhatWeDo from "@/components/home/WhatWeDo";
 import WhoAreWe from "@/components/home/WhoAreWe";
 import WhyStreetPlays from "./enquiry/WhyStreetPlays";
 import ServicesPage from "./services/page";
+import StatsStrip from "@/components/Statsstrip";
 
 // export default function HomeClient({ services }: any) {
 export default function HomeClient() {
@@ -68,6 +69,11 @@ export default function HomeClient() {
    <div className="website-container">
    {/* <Services /> */}
        <ServicesPage  />
+     </div>
+
+        <div className="website-container-with-bg-img">
+   {/* <Services /> */}
+       <StatsStrip  />
      </div>
 
         <div className="website-container">

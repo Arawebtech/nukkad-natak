@@ -17,7 +17,7 @@ export function useServices() {
     const fetchServices = async () => {
       try {
         setLoading(true);
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/services`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/services/public-services/all`, {
           signal: controller.signal,
           next: { revalidate: 60 }, // ISR-friendly cache hint
         } as RequestInit);

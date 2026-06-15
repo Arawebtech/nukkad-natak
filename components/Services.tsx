@@ -340,7 +340,7 @@ const Services = () => {
   const fetchServices = async () => {
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/services/public-service`
+        `${process.env.NEXT_PUBLIC_API_URL}/services/public-services/all`
       );
 
       const json = await res.json();

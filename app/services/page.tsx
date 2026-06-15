@@ -136,28 +136,45 @@ export default function ServicesPage() {
         )}
 
         {!loading && !error && (
-          <div className="servicesGrid" ref={gridRef}>
-            {services.map((service) => (
-              <Link
-                key={service._id}
-                href={`/services/${service.slug}`}
-                className="gridItem"
-              >
-                <Image
-                  src={
-                    service.thumbnail?.imageUrl ||
-                    "/placeholder.png"
-                  }
-                  alt={service.name}
-                  width={250}
-                  height={250}
-                  className="image"
-                />
+          // <div className="servicesGrid" ref={gridRef}>
+          //   {services.map((service) => (
+          //     <Link
+          //       key={service._id}
+          //       href={`/services/${service.slug}`}
+          //       className="gridItem"
+          //     >
+          //       <Image
+          //         src={
+          //           service.thumbnail?.imageUrl ||
+          //           "/placeholder.png"
+          //         }
+          //         alt={service.name}
+          //         width={250}
+          //         height={250}
+          //         className="image"
+          //       />
 
-                <h2 className="title">{service.name}</h2>
-              </Link>
-            ))}
+          //       <h2 className="title">{service.name}</h2>
+          //     </Link>
+          //   ))}
+          // </div>
+
+               <div className="servicesGrid" ref={gridRef}>
+     {services?.map((item: any) => (
+         <div
+  key={item._id || item.id}
+  className="gridItem gsap-hover-text"
+>
+         <img
+  src={item.thumbnail?.imageUrl || "/placeholder.png"}
+  alt={item.name}
+  className="image"
+/>
+
+            <h2 className="title">{item.name}</h2>
           </div>
+        ))}
+      </div>
         )}
       </div>
 
@@ -272,14 +289,17 @@ export default function ServicesPage() {
           }
         }
       `}</style> */}
-         <style jsx>{`
+   {/* GRID */}
+ 
+
+      <style jsx>{`
         .servicesGrid {
           width: 100%;
           display: grid;
           grid-template-columns: repeat(5, 1fr);
           column-gap: 0px;
           row-gap: 30px;
-          padding: 0px 60px 0px;
+          padding: 0px 60px 60px 60px;
         }
 
         .gridItem {
@@ -303,8 +323,6 @@ export default function ServicesPage() {
           font-size: 14px;
           font-weight: 700;
           line-height: 1.4;
-          text-align:center;
-          padding:10px 0px;
         }
 
         @media (max-width: 991px) {

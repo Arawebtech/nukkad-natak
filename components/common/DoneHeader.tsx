@@ -2,30 +2,18 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, Menu, X, ChevronDown } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { Mail, MessageCircle, Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { RiWhatsappFill } from "react-icons/ri";
+
+import { ChevronDown } from "lucide-react";
 import { useServices } from "@/hooks/useServices";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const servicesHoverTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pathname = usePathname();
   const { services } = useServices();
-
-  const isServicesActive = pathname.startsWith("/services");
-
-  const handleServicesMouseEnter = () => {
-    if (servicesHoverTimeout.current) clearTimeout(servicesHoverTimeout.current);
-    setServicesOpen(true);
-  };
-
-  const handleServicesMouseLeave = () => {
-    servicesHoverTimeout.current = setTimeout(() => setServicesOpen(false), 120);
-  };
 
 
    const navLinks = [
@@ -80,7 +68,7 @@ export default function Header() {
             }}
           >
          {/* HEADER BOTTOM LINE */}
-{/* <div
+<div
   style={{
     position: "absolute",
     bottom: 0,
@@ -93,7 +81,7 @@ export default function Header() {
     boxShadow: "0 0 12px rgba(235,99,29,0.7)",
     zIndex: 30,
   }}
-/> */}
+/>
             {/* MAIN */}
             <div
               style={{
@@ -191,133 +179,100 @@ export default function Header() {
     />
   </Link>
 
-  {/* Services dropdown — inserted after "About Us" (index 0) */}
+  {/* About ke bagal me Services */}
   {index === 0 && (
-    <div
-      style={{ position: "relative" }}
-      onMouseEnter={handleServicesMouseEnter}
-      onMouseLeave={handleServicesMouseLeave}
-    >
-      {/* Trigger button */}
-      <button
+    <div className="relative group">
+      
+
+      {/* <div style={{
+        padding:"20px"
+      }}
+        className="
+          absolute top-full left-0 mt-4
+          min-w-[280px]
+          
+          bg-black
+          border border-white/10
+          rounded-xl
+          overflow-hidden
+          opacity-0 invisible
+          group-hover:opacity-100
+          group-hover:visible
+          transition-all duration-300
+          shadow-2xl
+        "
+      >
+        {services.map((service) => (
+          <Link
+            key={service._id}
+            href={`/services/${service.slug}`}
+            className="
+              block
+              text-white
+              hover:bg-[#EB631D]
+              transition-all duration-300
+            "
+            style={{
+              padding:"10px 0px"
+            }}
+          >
+            {service.name}
+          </Link>
+        ))}
+      </div> */}
+      <div
+  style={{
+    position: "relative",
+  }}
+  className="group"
+>
+  <button
+    style={{
+      display: "flex",
+      alignItems: "center",
+      gap: "5px",
+      color: "#fff",
+    }}
+  >
+    Services
+    <ChevronDown size={16} />
+  </button>
+
+  <div
+    style={{
+      position: "absolute",
+      top: "calc(100% + 15px)",
+      left: 0,
+      minWidth: "280px",
+      background: "#111",
+      border: "1px solid rgba(255,255,255,0.1)",
+      borderRadius: "12px",
+      overflow: "hidden",
+      zIndex: 99999,
+
+      opacity: 0,
+      visibility: "hidden",
+      transform: "translateY(10px)",
+      transition: "all .3s ease",
+    }}
+    className="service-dropdown"
+  >
+    {services.map((service) => (
+      <Link
+        key={service._id}
+        href={`/services/${service.slug}`}
         style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "5px",
-          fontSize: "15px",
-          fontWeight: 500,
-          color: isServicesActive ? "#EB631D" : "#ffffff",
-          background: "none",
-          border: "none",
-          cursor: "pointer",
-          padding: 0,
-          transition: "color 0.3s ease",
-          position: "relative",
+          display: "block",
+          padding: "14px 18px",
+          color: "#fff",
+          textDecoration: "none",
         }}
       >
-        Services
-        <ChevronDown
-          size={15}
-          style={{
-            transition: "transform 0.3s ease",
-            transform: servicesOpen ? "rotate(180deg)" : "rotate(0deg)",
-          }}
-        />
-        {/* Active underline */}
-        <span
-          style={{
-            position: "absolute",
-            left: 0,
-            bottom: "-8px",
-            height: "2px",
-            width: isServicesActive ? "100%" : "0%",
-            borderRadius: "999px",
-            background: "#EB631D",
-            transition: "width 0.5s ease-in-out",
-          }}
-        />
-      </button>
-
-      {/* Dropdown panel — rendered in a portal-like fixed wrapper to avoid overflow clipping */}
-      <div
-        style={{
-          position: "absolute",
-          top: "calc(100% + 18px)",
-          left: 0,
-          minWidth: "260px",
-          background: "linear-gradient(145deg, #111 0%, #0d0d0d 100%)",
-          border: "1px solid rgba(255,255,255,0.1)",
-          borderRadius: "14px",
-          zIndex: 999999,
-          overflow: "hidden",
-          boxShadow: "0 20px 60px rgba(0,0,0,0.7), 0 0 0 1px rgba(235,99,29,0.08)",
-          opacity: servicesOpen ? 1 : 0,
-          visibility: servicesOpen ? "visible" : "hidden",
-          transform: servicesOpen ? "translateY(0px)" : "translateY(12px)",
-          transition: "opacity 0.28s ease, transform 0.28s ease, visibility 0.28s ease",
-          // Scrollable when many services
-          maxHeight: "360px",
-          overflowY: "auto",
-          // Custom scrollbar
-          scrollbarWidth: "thin",
-          scrollbarColor: "#EB631D33 transparent",
-        } as React.CSSProperties}
-      >
-        {/* Top accent line */}
-        <div
-          style={{
-            height: "2px",
-            background: "linear-gradient(90deg, #EB631D, rgba(235,99,29,0.2))",
-            flexShrink: 0,
-          }}
-        />
-        {services.length === 0 ? (
-          <div style={{ padding: "18px", color: "rgba(255,255,255,0.4)", fontSize: "14px" }}>
-            No services found
-          </div>
-        ) : (
-          services.map((service, i) => (
-            <Link
-              key={service._id}
-              href={`/services/${service.slug}`}
-              onClick={() => setServicesOpen(false)}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                padding: "13px 18px",
-                color: pathname === `/services/${service.slug}` ? "#EB631D" : "#e0e0e0",
-                textDecoration: "none",
-                fontSize: "14px",
-                fontWeight: 450,
-                borderBottom: i < services.length - 1 ? "1px solid rgba(255,255,255,0.05)" : "none",
-                background:
-                  pathname === `/services/${service.slug}`
-                    ? "rgba(235,99,29,0.08)"
-                    : "transparent",
-                transition: "background 0.2s ease, color 0.2s ease, padding-left 0.2s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = "rgba(235,99,29,0.12)";
-                e.currentTarget.style.color = "#EB631D";
-                e.currentTarget.style.paddingLeft = "22px";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background =
-                  pathname === `/services/${service.slug}`
-                    ? "rgba(235,99,29,0.08)"
-                    : "transparent";
-                e.currentTarget.style.color =
-                  pathname === `/services/${service.slug}` ? "#EB631D" : "#e0e0e0";
-                e.currentTarget.style.paddingLeft = "18px";
-              }}
-            >
-              <span>{service.name}</span>
-              <span style={{ color: "rgba(255,255,255,0.25)", fontSize: "12px" }}>→</span>
-            </Link>
-          ))
-        )}
-      </div>
+        {service.name}
+      </Link>
+    ))}
+  </div>
+</div>
     </div>
   )}
 </>
@@ -534,196 +489,64 @@ style={{
         flexDirection: "column",
       }}
     >
-  {/* "About Us" — first nav link */}
-  {navLinks.slice(0, 1).map((item) => {
-    const isActive = pathname === item.link;
-    return (
-      <Link
-        key={item.title}
-        href={item.link}
-        onClick={() => setMenuOpen(false)}
-        style={{
-          position: "relative",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          padding: "20px 0",
-          color: isActive ? "#EB631D" : "#ffffff",
-          fontSize: "16px",
-          fontWeight: 500,
-          textDecoration: "none",
-          borderBottom: "1px solid rgba(255,255,255,0.08)",
-          transition: "all 0.3s ease",
-        }}
-        onMouseEnter={(e) => { e.currentTarget.style.color = "#EB631D"; }}
-        onMouseLeave={(e) => { e.currentTarget.style.color = isActive ? "#EB631D" : "#ffffff"; }}
-      >
-        <span>{item.title}</span>
-        <span style={{ color: "rgba(255,255,255,0.3)", fontSize: "18px" }}>→</span>
-        <span
+  {navLinks.map((item) => {
+  const isActive = pathname === item.link;
+
+  return (
+        <Link
+          key={item.title}
+          href={item.link}
+          onClick={() => setMenuOpen(false)}
           style={{
-            position: "absolute",
-            left: 0,
-            bottom: 0,
-            width: "100%",
-            height: "2px",
-            background: "#EB631D",
-            transform: isActive ? "scaleX(1)" : "scaleX(0)",
-            transformOrigin: "left",
-            transition: "transform 0.4s ease",
+            position: "relative",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            padding: "20px 0",
+           color: isActive ? "#EB631D" : "#ffffff",
+            fontSize: "16px",
+            fontWeight: 500,
+            textDecoration: "none",
+            borderBottom:
+              "1px solid rgba(255,255,255,0.08)",
+            transition: "all 0.3s ease",
           }}
-          className="menu-line"
-        />
-      </Link>
-    );
-  })}
-
-  {/* MOBILE SERVICES ACCORDION */}
-  <div
-    style={{
-      borderBottom: "1px solid rgba(255,255,255,0.08)",
-    }}
-  >
-    {/* Accordion trigger */}
-    <button
-      onClick={() => setMobileServicesOpen((prev) => !prev)}
-      style={{
-        width: "100%",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        padding: "20px 0",
-        background: "none",
-        border: "none",
-        cursor: "pointer",
-        color: isServicesActive ? "#EB631D" : "#ffffff",
-        fontSize: "16px",
-        fontWeight: 500,
-        transition: "color 0.3s ease",
-      }}
-    >
-      <span>Services</span>
-      <ChevronDown
-        size={18}
-        style={{
-          color: "rgba(255,255,255,0.5)",
-          transition: "transform 0.35s ease",
-          transform: mobileServicesOpen ? "rotate(180deg)" : "rotate(0deg)",
-        }}
-      />
-    </button>
-
-    {/* Accordion content — animated height via max-height trick */}
-    <div
-      style={{
-        maxHeight: mobileServicesOpen ? "280px" : "0px",
-        overflow: "hidden",
-        transition: "max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
-      }}
-    >
-      <div
-        style={{
-          overflowY: "auto",
-          maxHeight: "280px",
-          paddingBottom: "12px",
-          scrollbarWidth: "thin",
-          scrollbarColor: "#EB631D33 transparent",
-        } as React.CSSProperties}
-      >
-        {services.length === 0 ? (
-          <div style={{ padding: "10px 0", color: "rgba(255,255,255,0.35)", fontSize: "14px" }}>
-            No services available
-          </div>
-        ) : (
-          services.map((service) => {
-            const isServiceActive = pathname === `/services/${service.slug}`;
-            return (
-              <Link
-                key={service._id}
-                href={`/services/${service.slug}`}
-                onClick={() => {
-                  setMenuOpen(false);
-                  setMobileServicesOpen(false);
-                }}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  padding: "13px 0 13px 16px",
-                  color: isServiceActive ? "#EB631D" : "rgba(255,255,255,0.75)",
-                  fontSize: "14px",
-                  fontWeight: 450,
-                  textDecoration: "none",
-                  borderLeft: `2px solid ${isServiceActive ? "#EB631D" : "rgba(255,255,255,0.1)"}`,
-                  marginBottom: "2px",
-                  borderRadius: "0 6px 6px 0",
-                  background: isServiceActive ? "rgba(235,99,29,0.06)" : "transparent",
-                  transition: "all 0.25s ease",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.color = "#EB631D";
-                  e.currentTarget.style.borderLeftColor = "#EB631D";
-                  e.currentTarget.style.background = "rgba(235,99,29,0.08)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.color = isServiceActive ? "#EB631D" : "rgba(255,255,255,0.75)";
-                  e.currentTarget.style.borderLeftColor = isServiceActive ? "#EB631D" : "rgba(255,255,255,0.1)";
-                  e.currentTarget.style.background = isServiceActive ? "rgba(235,99,29,0.06)" : "transparent";
-                }}
-              >
-                <span>{service.name}</span>
-                <span style={{ color: "rgba(255,255,255,0.25)", fontSize: "12px", paddingRight: "4px" }}>→</span>
-              </Link>
-            );
-          })
-        )}
-      </div>
-    </div>
-  </div>
-
-  {/* Remaining nav links (Gallery, Join Our Team, Enquire Now) */}
-  {navLinks.slice(1).map((item) => {
-    const isActive = pathname === item.link;
-    return (
-      <Link
-        key={item.title}
-        href={item.link}
-        onClick={() => setMenuOpen(false)}
-        style={{
-          position: "relative",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          padding: "20px 0",
-          color: isActive ? "#EB631D" : "#ffffff",
-          fontSize: "16px",
-          fontWeight: 500,
-          textDecoration: "none",
-          borderBottom: "1px solid rgba(255,255,255,0.08)",
-          transition: "all 0.3s ease",
-        }}
-        onMouseEnter={(e) => { e.currentTarget.style.color = "#EB631D"; }}
-        onMouseLeave={(e) => { e.currentTarget.style.color = isActive ? "#EB631D" : "#ffffff"; }}
-      >
-        <span>{item.title}</span>
-        <span style={{ color: "rgba(255,255,255,0.3)", fontSize: "18px" }}>→</span>
-        <span
-          style={{
-            position: "absolute",
-            left: 0,
-            bottom: 0,
-            width: "100%",
-            height: "2px",
-            background: "#EB631D",
-            transform: isActive ? "scaleX(1)" : "scaleX(0)",
-            transformOrigin: "left",
-            transition: "transform 0.4s ease",
+          onMouseEnter={(e) => {
+            e.currentTarget.style.color = "#EB631D";
           }}
-          className="menu-line"
-        />
-      </Link>
-    );
-  })}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.color = "#ffffff";
+          }}
+        >
+          <span>{item.title}</span>
+
+          <span
+            style={{
+              color: "rgba(255,255,255,0.3)",
+              fontSize: "18px",
+            }}
+          >
+            →
+          </span>
+
+          {/* LINE */}
+          <span
+            style={{
+              position: "absolute",
+              left: 0,
+              bottom: 0,
+              width: "100%",
+              height: "2px",
+              background: "#EB631D",
+             transform: isActive ? "scaleX(1)" : "scaleX(0)",
+              transformOrigin: "left",
+              transition: "transform 0.4s ease",
+            }}
+            className="menu-line"
+          />
+        </Link>
+  );
+})}
     </div>
 
     {/* BOTTOM */}

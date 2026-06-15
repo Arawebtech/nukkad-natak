@@ -136,6 +136,15 @@ background-repeat: repeat;
 }
 
 
+.group:hover .service-dropdown {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+
+.service-dropdown a:hover {
+  background: #eb631d;
+}
 
 /* reusable text shadow class */
 

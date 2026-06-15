@@ -140,9 +140,10 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
-import Header from "@/components/Header";
+
 import Footer from "@/components/Footer";
 import TrafficTracker from "@/components/common/TrafficTracker";
+import Header from "@/components/Header";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -182,8 +183,8 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* HEADER (server-safe) */}
-        <Header />
+   
+        <Header/>
 
         {/* PAGE CONTENT */}
         {children}
