@@ -17,12 +17,10 @@ export function useServices() {
     const fetchServices = async () => {
       try {
         setLoading(true);
-    const res = await fetch(
-  "https://backend.nukkadnatak.com/api/gallery/public-gallery?page=1&limit=3&status=true",
-  {
-    cache: "no-store",
-  }
-);
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/services/public-services/all`, {
+          signal: controller.signal,
+          next: { revalidate: 60 }, // ISR-friendly cache hint
+        } as RequestInit);
 
         if (!res.ok) throw new Error("Failed to load services");
 
@@ -49,7 +47,7 @@ export function useServices() {
   return { services, loading, error };
 }
 
-
+// ─── Hook: single service by slug ────────────────────────────────────────────
 
 export function useService(slug: string) {
   const [service, setService] = useState<ServiceDetail | null>(null);
