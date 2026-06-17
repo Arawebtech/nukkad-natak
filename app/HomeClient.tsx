@@ -14,6 +14,7 @@ import WhoAreWe from "@/components/home/WhoAreWe";
 import WhyStreetPlays from "./enquiry/WhyStreetPlays";
 import ServicesPage from "./services/page";
 import StatsStrip from "@/components/Statsstrip";
+import FreeQuet from "@/components/common/FreeQuet";
 
 // export default function HomeClient({ services }: any) {
 export default function HomeClient() {
@@ -83,6 +84,11 @@ export default function HomeClient() {
   
    <WhyStreetPlays />
    <Home5 />
+     </div>
+
+             <div className="website-container-with-bg-img">
+   {/* <Services /> */}
+       <FreeQuet  />
      </div>
 
 

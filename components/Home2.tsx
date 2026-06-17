@@ -403,7 +403,7 @@ const Home2 = () => {
     <>
       <div>
         <HeadingUpdate
-          title="Trusted By"
+          title="Trusted By "
           color="black"
           title2={true}
           title2Text="Industry Leaders"

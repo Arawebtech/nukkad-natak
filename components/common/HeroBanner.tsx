@@ -133,7 +133,7 @@ useEffect(() => {
             <Heading2 title={heading} color="white" />
 
             {/* 3. DESCRIPTION */}
-            {description && (
+            {/* {description && (
               <p
                className="text-shadow-black"
                 style={{
@@ -146,7 +146,7 @@ useEffect(() => {
               >
                 {description}
               </p>
-            )}
+            )} */}
 
             {/* 4. TEXT */}
             {text && (
