@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Work Gallery - Nukkad Natak Performances Across India",
+  title: "Nukkad Natak Gallery | Campaign Photos & Performances",
   description:
-    "Explore our gallery of live Nukkad Natak performances at schools, colleges, corporate events, CSR campaigns, and government awareness drives across India.",
+    "Explore highlights from our nukkad natak campaigns — CSR drives, government awareness, NGO programmes & brand activations. 15+ years of impactful nukkad natak performances.",
   path: "/gallery",
   keywords: [
     "nukkad natak gallery",

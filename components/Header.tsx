@@ -39,7 +39,7 @@ export default function Header() {
     },
     {
       title: "Join Our Team",
-      link: "/team",
+      link: "/join-our-team",
     },
 
         {

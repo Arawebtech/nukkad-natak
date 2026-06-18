@@ -13,7 +13,7 @@ const staticRoutes: MetadataRoute.Sitemap = [
     changeFrequency: "monthly",
   },
   { url: `${SITE_URL}/gallery`, priority: 0.8, changeFrequency: "weekly" },
-  { url: `${SITE_URL}/team`, priority: 0.75, changeFrequency: "monthly" },
+  { url: `${SITE_URL}/join-our-team`, priority: 0.75, changeFrequency: "monthly" },
   { url: `${SITE_URL}/enquiry`, priority: 0.85, changeFrequency: "monthly" },
 ];
 

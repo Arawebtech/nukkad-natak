@@ -35,7 +35,9 @@ export function buildPageMetadata({
   noIndex = false,
   ogImage = "/images/logo.svg",
 }: PageMetadataOptions): Metadata {
-  const url = `${SITE_URL}${path}`;
+  // const url = `${SITE_URL}${path}`;
+    const cleanPath = path ? `/${path.replace(/^\/|\/$/g, "")}` : "";
+  const url = `${SITE_URL}${cleanPath}`;
   const imageUrl = ogImage.startsWith("http") ? ogImage : `${SITE_URL}${ogImage}`;
 
   return {

@@ -24,7 +24,7 @@ export default function Footer() {
     },
     {
       title: "Join Our Team",
-      link: "/team",
+      link: "/join-our-team",
     },
     {
       title: "Inquiry",

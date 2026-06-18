@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Join Our Team - Careers at Nukkad Natak India",
+  title: "Join Our Nukkad Natak Team | Artists & Performers",
   description:
-    "Join India's leading Nukkad Natak and street play agency. Explore career opportunities with WI Events and be part of awareness campaigns that create real change.",
-  path: "/team",
+    " Are you a performer, actor or writer passionate about nukkad natak? Join NukkadNatak.com — apply now and be part of our nukkad natak group nationwide.",
+  path: "/join-our-team",
   keywords: [
     "nukkad natak careers",
     "street play jobs India",

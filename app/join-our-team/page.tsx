@@ -6,8 +6,7 @@ import React, { useEffect, useRef } from "react";
 
 import gsap from "gsap";
 
-import Breadcrumb from "@/components/common/Breadcrumb";
-import Heading2 from "@/components/common/Heading2";
+
 import HeroBanner from "@/components/common/HeroBanner";
 import WorkWithUs from "./WorkWithUs";
 import CareerSection from "./CareerSection";

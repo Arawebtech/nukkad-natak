@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Company Enquiry - Book Nukkad Natak Street Play Services",
+  title: "Enquire Now | Book a Nukkad Natak Performance",
   description:
-    "Tell us about your campaign requirements and our Nukkad Natak team will connect with you within 24 hours for CSR, IEC, and awareness programs across India.",
+    "Looking to book a nukkad natak performance? Fill out our enquiry form and get a custom quote within 24 hours. CSR, government, NGO & brand campaigns.",
   path: "/enquiry",
   keywords: [
     "nukkad natak enquiry",
