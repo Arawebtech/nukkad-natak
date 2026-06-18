@@ -26,9 +26,9 @@ export default function ServicesSectionClient({
 
       <div className="servicesGrid">
         {services?.map((item) => (
-          <Link
+          <div
             key={item._id}
-            href={`/services/${item.slug}`}
+            // href={`/services/${item.slug}`}
             className="gridItem"
           >
             <Image
@@ -40,7 +40,7 @@ export default function ServicesSectionClient({
             />
 
             <h3 className="title">{item.name}</h3>
-          </Link>
+          </div>
         ))}
       </div>
 
