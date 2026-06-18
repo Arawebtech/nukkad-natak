@@ -34,8 +34,8 @@ export default function ServicesSectionClient({
             <Image
               src={item.thumbnail?.imageUrl || "/placeholder.png"}
               alt={item.name}
-              width={250}
-              height={250}
+              width={220}
+              height={220}
               className="image"
             />
 
@@ -50,7 +50,8 @@ export default function ServicesSectionClient({
           display: grid;
           grid-template-columns: repeat(5, 1fr);
           row-gap: 30px;
-          padding: 0px 60px 60px 60px;
+          padding: 0px 0px 60px 0px;
+          text-align:center
         }
 
         .gridItem {
@@ -93,8 +94,8 @@ export default function ServicesSectionClient({
           }
 
           .image {
-            max-width: 100px;
-            width: 95%;
+            max-width: 150px;
+            width: 100%;
             object-fit: contain;
           }
 
