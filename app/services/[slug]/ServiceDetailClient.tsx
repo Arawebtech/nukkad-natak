@@ -1,21 +1,11 @@
-// app/services/[slug]/page.tsx
 "use client";
 
-import { useEffect, useRef } from "react";
-import { useParams } from "next/navigation";
-import gsap from "gsap";
-
 import HeroBanner from "@/components/common/HeroBanner";
-import ServiceContent, {
-  ServiceContentSkeleton,
-} from "@/components/services/ServiceContent";
+import ServiceContent from "@/components/services/ServiceContent";
 import ServiceFaqSection from "@/components/services/ServiceFaqSection";
-import './style.css'
+import "./style.css";
 
-import { useService } from "@/hooks/useServices";
-import Loading from "./loading";
-
-// ─── Error state ─────────────────────────────────────────────────────────────
+import type { ServiceDetail } from "@/types/service";
 
 function ServiceError({ message }: { message: string }) {
   return (
@@ -50,80 +40,48 @@ function ServiceError({ message }: { message: string }) {
   );
 }
 
-
-
 export default function ServiceDetailClient({
-  slug,
+  initialService,
 }: {
-  slug: string;
+  initialService: ServiceDetail;
 }) {
-  const { service, loading, error } = useService(slug);
+  const service = initialService;
+  const faqs = service?.faqSection?.faqs ?? [];
 
-
-
-
-
-  if (error) return <ServiceError message={error} />;
-
-   const faqs = service?.faqSection?.faqs ?? [];
-
-
-   if (loading) {
-  return <Loading />;
-}
-
-if (!service) {
-  return null;
-}
-
+  if (!service) {
+    return <ServiceError message="Service not found." />;
+  }
 
   return (
     <div style={styles.page}>
-
-
       <HeroBanner
-        backgroundImage={service?.heroBanner?.image ?? "/images/brand-banner1.jpeg"}
-       heading={service?.heroBanner?.heading || ""}
-
+        backgroundImage={
+          service?.heroBanner?.image ?? "/images/brand-banner1.jpeg"
+        }
+        heading={service?.heroBanner?.heading || ""}
         breadcrumbItems={[
           { label: "Home", href: "/" },
           { label: "Services", href: "/services" },
           { label: service?.name ?? "" },
         ]}
-        // description={
-        //   service?.heroBanner?.description ? (
-        //     <span
-        //       dangerouslySetInnerHTML={{ __html: service.heroBanner.description }}
-        //     />
-        //   ) : undefined
-        // }
-
-          description={
-    <>
-      Promote Your <span style={{ color: "#F56A28" }}>Brand</span>. Engage Your{" "}
-      <span style={{ color: "#F56A28" }}>Audience</span>.
-      <br />
-      Create Lasting <span style={{ color: "#F56A28" }}>Impact</span>.
-    </>
-  }
-
+        description={
+          <>
+            Promote Your <span style={{ color: "#F56A28" }}>Brand</span>. Engage
+            Your <span style={{ color: "#F56A28" }}>Audience</span>.
+            <br />
+            Create Lasting <span style={{ color: "#F56A28" }}>Impact</span>.
+          </>
+        }
         text={service?.heroBanner?.text ?? ""}
       />
 
-      {/* ── Main content ─────────────────────────────────────── */}
       <div className="website-container">
-        {loading ? (
-          <ServiceContentSkeleton />
-        ) : service ? (
-          <ServiceContent service={service} />
-        ) : null}
+        <ServiceContent service={service} />
       </div>
 
-      {/* ── FAQ Section ──────────────────────────────────────── */}
-
-{!loading && service?.faqSection && faqs.length > 0 && (
-  <ServiceFaqSection faqSection={service.faqSection} />
-)}
+      {service?.faqSection && faqs.length > 0 && (
+        <ServiceFaqSection faqSection={service.faqSection} />
+      )}
 
       <style jsx>{`
         @media (max-width: 768px) {
@@ -137,13 +95,11 @@ if (!service) {
       `}</style>
     </div>
   );
-};
+}
 
-
-
-const styles: any = {
+const styles = {
   page: {
     width: "100%",
     overflow: "hidden",
   },
-};
+} as const;

@@ -1,5 +1,6 @@
 // import Image from "next/image";
 
+
 // export default function Home() {
 //   return (
 //     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
@@ -172,10 +173,72 @@
 // }
 
 
-export const dynamic = "force-dynamic";
 
-import HomeClient from "./HomeClient";
+// import HomeClient from "./HomeClient";
 
-export default function Page() {
-  return <HomeClient />;
+// export default function Page() {
+//   return <HomeClient />;
+// }
+
+import { buildPageMetadata } from "@/lib/seo";
+import AwarenessBanner from "@/components/AwarenessBanner";
+import WhoAreWe from "@/components/home/WhoAreWe";
+import WhatWeDo from "@/components/home/WhatWeDo";
+
+import StatsStrip from "@/components/Statsstrip";
+import Home4 from "@/components/Home4";
+import WhyStreetPlays from "./enquiry/WhyStreetPlays";
+import Home5 from "@/components/Home5";
+import FreeQuet from "@/components/common/FreeQuet";
+import Home2 from "@/components/Home2";
+import ServicesSection from "@/components/home/ServicesSection";
+
+export const metadata = buildPageMetadata({
+  title:
+    "Nukkad Natak Group in India | Street Play Services for CSR Campaigns",
+  description:
+    "Professional Nukkad Natak and Street Play Services across India for CSR campaigns, IEC activities, awareness programs and public engagement.",
+  path: "/",
+  keywords: [
+    "Nukkad Natak Group India",
+    "street play services",
+    "CSR campaigns street play",
+    "IEC activities India",
+  ],
+});
+
+export default function HomePage() {
+  return (
+    <>
+      <AwarenessBanner />
+
+      <div className="website-container">
+        <WhoAreWe />
+        <WhatWeDo />
+      </div>
+
+      <Home2 />
+
+      <div className="website-container">
+        <ServicesSection />
+      </div>
+
+      <div className="website-container-with-bg-img">
+        <StatsStrip />
+      </div>
+
+      <div className="website-container">
+        <Home4 />
+      </div>
+
+      <div className="website-container">
+        <WhyStreetPlays />
+        <Home5 />
+      </div>
+
+      <div className="website-container-with-bg-img">
+        <FreeQuet />
+      </div>
+    </>
+  );
 }

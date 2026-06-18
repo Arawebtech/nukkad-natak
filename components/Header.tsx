@@ -312,7 +312,8 @@ export default function Header() {
                 e.currentTarget.style.paddingLeft = "18px";
               }}
             >
-              <span>{service.name}</span>
+              {/* <span>{service.name}</span> */}
+              <span>{service.heroBanner?.heading}</span>
               <span style={{ color: "rgba(255,255,255,0.25)", fontSize: "12px" }}>→</span>
             </Link>
           ))

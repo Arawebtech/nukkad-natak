@@ -10,7 +10,7 @@ export async function GET(
     const res = await fetch(
       `${process.env.API_URL}/services/slug/${slug}`,
       {
-        cache: "no-store",
+        next: { revalidate: 3600 },
       }
     );
 

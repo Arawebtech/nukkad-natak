@@ -1,35 +1,3 @@
-// import type { NextConfig } from "next";
-
-// const nextConfig: NextConfig = {
-//   poweredByHeader: false,
-
-//   async headers() {
-//     return [
-//       {
-//         source: "/:all*(js|css)",
-//         headers: [
-//           {
-//             key: "Cache-Control",
-//             value:
-//               "no-store, no-cache, must-revalidate, proxy-revalidate",
-//           },
-//           {
-//             key: "Pragma",
-//             value: "no-cache",
-//           },
-//           {
-//             key: "Expires",
-//             value: "0",
-//           },
-//         ],
-//       },
-//     ];
-//   },
-// };
-
-// export default nextConfig;
-
-
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -42,27 +10,25 @@ const nextConfig: NextConfig = {
         hostname: "res.cloudinary.com",
       },
     ],
+    formats: ["image/avif", "image/webp"],
   },
 
-  async headers() {
+  async redirects() {
     return [
       {
-        source: "/:all*(js|css)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value:
-              "no-store, no-cache, must-revalidate, proxy-revalidate",
-          },
-          {
-            key: "Pragma",
-            value: "no-cache",
-          },
-          {
-            key: "Expires",
-            value: "0",
-          },
-        ],
+        source: "/about-us",
+        destination: "/about",
+        permanent: true,
+      },
+      {
+        source: "/contact-us",
+        destination: "/enquiry",
+        permanent: true,
+      },
+      {
+        source: "/contact",
+        destination: "/enquiry",
+        permanent: true,
       },
     ];
   },

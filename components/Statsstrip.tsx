@@ -197,23 +197,64 @@
 //   );
 // }
 
+
+
+
 "use client";
 
 import { useEffect, useRef, useState } from "react";
 import { HeadingUpdate } from "./common/HeadingUpdate";
 
+import {
+  FiGlobe,
+  FiFileText,
+  FiUsers,
+  FiAward,
+} from "react-icons/fi";
+import { IndiaMapIcon } from "./common/IndiaMapIcon";
+import { GrCopy } from "react-icons/gr";
+import { GiIndiaGate } from "react-icons/gi";
+
 interface Stat {
   value: number | null;
   suffix: string;
   label: string;
-  icon: string;
+  icon: React.ReactNode;
 }
 
+// const STATS: Stat[] = [
+//   { value: 15, suffix: "+", label: "Years Experience", icon: <FiUsers /> },
+//   { value: 500, suffix: "+", label: "Campaigns Delivered", icon: <FiAward /> },
+//   { value: null, suffix: "", label: "Pan-India Reach", icon: <FiGlobe /> },
+//   { value: null, suffix: "", label: "Customized Scripts", icon: <FiFileText /> },
+// ];
+
 const STATS: Stat[] = [
-  { value: 15, suffix: "+", label: "Years Experience", icon: "👥" },
-  { value: 500, suffix: "+", label: "Campaigns Delivered", icon: "🎭" },
-  { value: null, suffix: "+", label: "Pan-India Reach", icon: "🌐" },
-  { value: null, suffix: "+", label: "Customized Scripts", icon: "📍" },
+  { value: 15, suffix: "+", label: "Years Experience", icon: null },
+  { value: 500, suffix: "+", label: "Campaigns Delivered", icon: null },
+  {
+    value: null,
+    suffix: "",
+    label: "Pan-India Reach",
+    icon: <GiIndiaGate  color="white" />,
+//     icon: (
+//   <img
+//     src="/images/india-white.svg"
+//     alt="India Map"
+//     width={52}
+//     height={52}
+//     style={{
+//       filter: "drop-shadow(0 0 4px #EB631D)",
+//     }}
+//   />
+// ),
+  },
+  {
+    value: null,
+    suffix: "",
+    label: "Customized Scripts",
+    icon: <GrCopy  color="white" />
+  },
 ];
 
 function easeOutExpo(t: number): number {
@@ -300,7 +341,7 @@ function StatCard({
       {/* NUMBER (stable layout, no shift) */}
       <div
         style={{
-          fontSize: "clamp(20px, 5vw, 30px)",
+          fontSize: "clamp(30px, 5vw, 30px)",
           fontWeight: 700,
           color: "#ffffff",
           lineHeight: 1,
@@ -312,14 +353,33 @@ function StatCard({
           justifyContent: "center",
         }}
       >
-        {stat.value === null ? (
+        {/* {stat.value === null ? (
           <span style={{ opacity: 0 }}>0</span> // invisible placeholder
         ) : (
           <>
             {count.toLocaleString()}
             <span style={{ color: "#EB631D" }}>{stat.suffix}</span>
           </>
-        )}
+        )} */}
+
+        {stat.value === null ? (
+  <span
+    style={{
+      fontSize: "40px",
+      color: "#EB631D",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    }}
+  >
+    {stat.icon}
+  </span>
+) : (
+  <>
+    {count.toLocaleString()}
+    <span style={{ color: "#EB631D" }}>{stat.suffix}</span>
+  </>
+)}
       </div>
 
       {/* divider */}
@@ -374,16 +434,16 @@ export default function StatsStrip() {
   return (
     <div
       ref={sectionRef}
-      style={{ width: "100%", overflow: "hidden", paddingBottom: "60px" }}
+      style={{ width: "100%", overflow: "hidden", padding: "40px 0px" }}
     >
-      <HeadingUpdate
+      {/* <HeadingUpdate
         title="Our"
         color="white"
         title2={true}
         title2Text="Impact"
         mobileSize="25px"
         desktopSize="30px"
-      />
+      /> */}
 
       <div
         style={{

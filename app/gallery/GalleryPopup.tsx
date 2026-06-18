@@ -79,7 +79,7 @@
 //                 }`}
 //                 onClick={() => setActiveImage(img.url)}
 //               >
-//                 <img src={img.url} />
+//                 <img src={img.url} alt={`Gallery thumbnail ${i + 1}`} />
 //               </div>
 //             ))}
 //           </div>
@@ -434,6 +434,7 @@ const GalleryPopup = ({ open, onClose, data }: any) => {
             <img
               src={activeImage}
               className="mainImage"
+              alt="Gallery image preview"
             />
 
             {/* ARROWS */}
@@ -468,7 +469,7 @@ const GalleryPopup = ({ open, onClose, data }: any) => {
                 }`}
                 onClick={() => setActiveIndex(i)}
               >
-                <img src={img.url} />
+                <img src={img.url} alt={`Gallery thumbnail ${i + 1}`} />
               </div>
             ))}
           </div>

@@ -47,10 +47,17 @@ const Heading2 = ({
   color = "black",
   title2 = false,
   title2Text = "",
-
-  // 👇 NEW: responsive size control
   mobileSize = "25px",
   desktopSize = "30px",
+  as: HeadingTag = "h2",
+}: {
+  title?: string;
+  color?: string;
+  title2?: boolean;
+  title2Text?: string;
+  mobileSize?: string;
+  desktopSize?: string;
+  as?: "h1" | "h2";
 }) => {
   return (
     <div
@@ -59,9 +66,8 @@ const Heading2 = ({
         width: "fit-content",
       }}
     >
-
-                <AnimateText>
-           <h2
+      <AnimateText>
+        <HeadingTag
         style={{
           margin: 0,
           fontSize: `clamp(${mobileSize}, 5vw, ${desktopSize})`,
@@ -80,7 +86,7 @@ const Heading2 = ({
             {title2Text}
           </span>
         )}
-      </h2>
+      </HeadingTag>
       </AnimateText>
 
     </div>

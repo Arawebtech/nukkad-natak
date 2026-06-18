@@ -130,7 +130,7 @@ useEffect(() => {
             <Breadcrumb items={breadcrumbItems} />
 
             {/* 2. HEADING */}
-            <Heading2 title={heading} color="white" />
+            <Heading2 title={heading} color="white" as="h1" />
 
             {/* 3. DESCRIPTION */}
             {/* {description && (

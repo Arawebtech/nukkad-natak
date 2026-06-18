@@ -21,7 +21,7 @@
   --radius-primary: 20px;
 
   /* FONT */
-  --font-primary: "Poppins", sans-serif;
+  --font-primary: var(--font-poppins), "Poppins", sans-serif;
 
   /* LAYOUT */
   --container-width: 1400px;
