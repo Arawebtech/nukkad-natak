@@ -236,9 +236,7 @@ export default function HomePage() {
         <Home5 />
       </div>
 
-      <div className="website-container-with-bg-img">
-        <FreeQuet />
-      </div>
+   
     </>
   );
 }

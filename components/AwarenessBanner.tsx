@@ -145,7 +145,7 @@ export default function AwarenessBanner() {
              India’s Trusted Nukkad Natak Group
             </p> */}
 
-            <p
+            {/* <p
          className="text-shadow-black"
   style={{
     color: "#eb631d",
@@ -161,9 +161,9 @@ export default function AwarenessBanner() {
   }}
 >
   India’s Trusted Nukkad Natak Group
-</p>
+</p> */}
 
-            <div
+            {/* <div
               style={{
                 width: "50px",
                 height: "2px",
@@ -171,7 +171,7 @@ export default function AwarenessBanner() {
                 marginTop: "10px",
                 borderRadius: "20px",
               }}
-            />
+            /> */}
           </div>
 
           <h1
@@ -185,9 +185,9 @@ export default function AwarenessBanner() {
 
             }}
           >
-           Creating Meaningful Impact Through {" "} 
+           NukkadNatak.com - India’s Trusted {" "} 
             <span style={{ color: "#eb631d" }}>
-              Awareness
+              Nukkad Natak Group
             </span>
           </h1>
 

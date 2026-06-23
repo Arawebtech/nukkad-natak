@@ -30,10 +30,10 @@ export default function Footer() {
       title: "Inquiry",
       link: "/enquiry",
     },
-    {
-      title: "Brand Promotion",
-      link: "/brand",
-    },
+    // {
+    //   title: "Brand Promotion",
+    //   link: "/brand",
+    // },
   ];
   const services = [
     "Government Campaigns",

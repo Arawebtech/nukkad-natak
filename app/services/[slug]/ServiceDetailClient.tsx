@@ -6,6 +6,7 @@ import ServiceFaqSection from "@/components/services/ServiceFaqSection";
 import "./style.css";
 
 import type { ServiceDetail } from "@/types/service";
+import FreeQuet from "@/components/common/FreeQuet";
 
 function ServiceError({ message }: { message: string }) {
   return (
@@ -77,6 +78,10 @@ export default function ServiceDetailClient({
 
       <div className="website-container">
         <ServiceContent service={service} />
+      </div>
+
+         <div className="website-container-with-bg-img">
+        <FreeQuet />
       </div>
 
       {service?.faqSection && faqs.length > 0 && (

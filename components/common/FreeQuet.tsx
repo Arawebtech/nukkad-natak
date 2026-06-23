@@ -235,10 +235,10 @@ useEffect(() => {
           {/* TICKS */}
           <div style={tickRow}>
             <div style={tickItem}>
-              <FaCheck color="#EB631D" /> 15+ Years
+              <FaCheck color="#EB631D" /> 15+ Years Experience
             </div>
             <div style={tickItem}>
-              <FaCheck color="#EB631D" /> 500+ Clients
+              <FaCheck color="#EB631D" /> 300+ Clients
             </div>
             <div style={tickItem}>
               <FaCheck color="#EB631D" /> Pan-India
@@ -281,6 +281,23 @@ useEffect(() => {
   </a>
 </div>
       </div>
+
+
+           <div
+        style={{
+          position: "absolute",
+          bottom: -5,
+          left: 0,
+          width: "100%",
+          height: "12px",
+          backgroundImage: "url('/images/footerline.png')",
+          backgroundRepeat: "repeat-x",
+          backgroundPosition: "center",
+          backgroundSize: "contain",
+          zIndex: 20,
+          opacity: 0.95,
+        }}
+      />
     </div>
   );
 }

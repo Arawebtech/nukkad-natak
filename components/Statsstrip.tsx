@@ -231,7 +231,7 @@ interface Stat {
 
 const STATS: Stat[] = [
   { value: 15, suffix: "+", label: "Years Experience", icon: null },
-  { value: 500, suffix: "+", label: "Campaigns Delivered", icon: null },
+  { value: 300, suffix: "+", label: "Campaigns Delivered", icon: null },
   {
     value: null,
     suffix: "",
