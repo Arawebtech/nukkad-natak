@@ -63,7 +63,7 @@ export default function ServiceDetailClient({
         breadcrumbItems={[
           { label: "Home", href: "/" },
           { label: "Services", href: "/services" },
-          { label: service?.name ?? "" },
+          { label: service?.heroBanner?.heading ?? "" },
         ]}
         description={
           <>
