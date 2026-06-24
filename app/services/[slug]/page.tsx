@@ -59,7 +59,7 @@ function buildServiceJsonLd(service: ServiceDetail, slug: string) {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: service.name,
+    name: service?.heroBanner?.heading,
     description:
       service.seo?.metaDescription ||
       service.heroBanner?.description ||
