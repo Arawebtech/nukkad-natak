@@ -132,9 +132,9 @@ const Enquiry = () => {
          }}>
         <WhyStreetPlays/>
       </div> */}
-      <div className="website-container">
+      {/* <div className="website-container">
   <EnquirySection />
-</div>
+</div> */}
 
 {/* Office Location */}
 <div
