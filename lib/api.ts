@@ -6,7 +6,7 @@ export async function fetchServices(): Promise<ServiceCard[]> {
   if (!API_URL) return [];
 
   try {
-    const res = await fetch(`${API_URL}/services`, {
+    const res = await fetch(`${API_URL}/services/public-services/all`, {
       next: { revalidate: 3600 },
     });
 

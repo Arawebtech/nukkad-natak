@@ -740,33 +740,31 @@ const Home4 = () => {
           background-size: cover;
           background-position: center;
 
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+     
 
-          gap: 16px;
-
-          padding: 16px 20px;
-          flex-wrap: wrap;
+          padding: 10px 10px;
+  
         }
 
         .title {
-          font-size: 16px;
+          font-size: 14px;
           font-weight: 700;
           line-height: 1.4;
-
+          min-height:45px;
           display: -webkit-box;
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
-
+          
           overflow: hidden;
-        }
-
-        .buttonWrap {
-          display: flex;
-          align-items: center;
-          gap: 6px;
-
+          }
+          
+          .buttonWrap {
+            display: flex;
+            align-items: center;
+            float:right;
+            gap: 6px;
+            width:fit-content;
+            margin-top:6px;
           padding: 8px 12px;
           border-radius: 6px;
 

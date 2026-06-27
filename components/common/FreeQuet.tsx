@@ -139,8 +139,8 @@ useEffect(() => {
     alignItems: "center",
     justifyContent: "space-between",
     flexWrap: "wrap",
-    gap: "25px",
-  padding: isMobile ? "0px" : "0px 40px",
+    gap: "20px",
+  padding: isMobile ? "0px" : "0px 10px",
     margin: "auto",
     color: "#fff",
     position: "relative",
@@ -152,7 +152,7 @@ useEffect(() => {
   };
 
   const headingStyle: CSSProperties = {
-    fontSize: "20px",
+    fontSize: "16px",
     fontWeight: 700,
     marginBottom: "10px",
   };
@@ -162,7 +162,7 @@ useEffect(() => {
   };
 
   const subStyle: CSSProperties = {
-    fontSize: "12px",
+    fontSize: "10px",
     opacity: 0.8,
     lineHeight: "1.5",
   };
@@ -186,7 +186,7 @@ useEffect(() => {
   const buttonStyle: CSSProperties = {
     background: "#EB631D",
     color: "#fff",
-    padding: "12px 20px",
+    padding: "12px 12px",
     borderRadius: "8px",
     textDecoration: "none",
     fontWeight: 600,

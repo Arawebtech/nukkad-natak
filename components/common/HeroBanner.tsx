@@ -180,6 +180,7 @@ useEffect(() => {
     
 
             background: url("/images/mobile-banner2.jpeg")
+                // background: url(${backgroundImage?.trim() ? backgroundImage : "/images/herobanner.webp"})
               bottom center / cover no-repeat !important;
             padding-top: 50px !important;
             padding-bottom: 60px !important;
