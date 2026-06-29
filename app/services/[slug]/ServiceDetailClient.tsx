@@ -59,6 +59,11 @@ export default function ServiceDetailClient({
         backgroundImage={
           service?.heroBanner?.image ?? "/images/brand-banner1.jpeg"
         }
+
+           backgroundImageMobile={
+          service?.backgroundImageMobile?.imageUrl ??  service?.heroBanner?.image ?? "/images/brand-banner1.jpeg"
+        }
+
         heading={service?.heroBanner?.heading || ""}
         breadcrumbItems={[
           { label: "Home", href: "/" },

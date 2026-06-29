@@ -7,6 +7,7 @@ import Heading2 from "@/components/common/Heading2";
 
 interface HeroBannerProps {
   backgroundImage: string;
+  backgroundImageMobile?: string;
 
   breadcrumbItems: {
     label: string;
@@ -22,6 +23,7 @@ interface HeroBannerProps {
 
 const HeroBanner = ({
   backgroundImage,
+  backgroundImageMobile,
   breadcrumbItems,
   heading,
   description,
@@ -179,12 +181,16 @@ useEffect(() => {
 
     
 
-            background: url("/images/mobile-banner2.jpeg")
-                // background: url(${backgroundImage?.trim() ? backgroundImage : "/images/herobanner.webp"})
+       
+                 background: url("${
+        backgroundImageMobile?.trim()
+          ? backgroundImageMobile
+          : "/images/mobile-banner2.jpeg"
+      }")
               bottom center / cover no-repeat !important;
             padding-top: 50px !important;
             padding-bottom: 60px !important;
-            background-position: center !important;
+            background-position: ${backgroundImageMobile?.trim() ? "right" : "center"} !important;
           }
         }
       `}</style>

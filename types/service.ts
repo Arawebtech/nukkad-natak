@@ -5,6 +5,11 @@ export interface ServiceThumbnail {
   publicId: string;
 }
 
+export interface ServiceBackgroundImageMobile {
+  imageUrl: string;
+  publicId: string;
+}
+
 export interface ServiceHeroBanner {
   image: string;
   publicId: string;
@@ -66,6 +71,7 @@ export interface ServiceDetail {
   name: string;
   slug: string;
   thumbnail: ServiceThumbnail;
+  backgroundImageMobile:ServiceBackgroundImageMobile;
   heroBanner: ServiceHeroBanner;
   headingDesc: ServiceSection[];
   processSection: ProcessSection;
