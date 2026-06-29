@@ -672,7 +672,8 @@ style={{
                   e.currentTarget.style.background = isServiceActive ? "rgba(235,99,29,0.06)" : "transparent";
                 }}
               >
-                <span>{service.name}</span>
+                {/* <span>{service.name}</span> */}
+                <span>{service.heroBanner?.heading}</span>
                 <span style={{ color: "rgba(255,255,255,0.25)", fontSize: "12px", paddingRight: "4px" }}>→</span>
               </Link>
             );

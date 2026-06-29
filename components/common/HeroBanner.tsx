@@ -188,8 +188,9 @@ useEffect(() => {
           : "/images/mobile-banner2.jpeg"
       }")
               bottom center / cover no-repeat !important;
-            padding-top: 50px !important;
-            padding-bottom: 60px !important;
+            padding-top: 60px !important;
+            // padding-bottom: 60px !important;
+            margin-top: 20px !important;
             background-position: ${backgroundImageMobile?.trim() ? "right" : "center"} !important;
           }
         }
