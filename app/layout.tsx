@@ -167,7 +167,8 @@ export const viewport: Viewport = {
 
 const rootPageMeta = buildPageMetadata({
   title:
-    "NukkadNatak.com - Street Play & Nukkad Natak Group in India",
+    "NukkadNatak.com - The Street Play & Nukkad Natak Group",
+    description:"India's professional Nukkad Natak Group with 15+ yrs experience. Trusted by IndianOil, TATA Motors & Indian Railways. CSR, IEC & govt campaigns. Pan-Indis",
   path: "/",
 });
 

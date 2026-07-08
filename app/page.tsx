@@ -195,9 +195,9 @@ import ServicesSection from "@/components/home/ServicesSection";
 
 export const metadata = buildPageMetadata({
   title:
-    "Nukkad Natak Group in India | Street Play Services for CSR Campaigns",
+    "NukkadNatak.com - The Street Play & Nukkad Natak Group",
   description:
-    "Professional Nukkad Natak and Street Play Services across India for CSR campaigns, IEC activities, awareness programs and public engagement.",
+    "India's professional Nukkad Natak Group with 15+ yrs experience. Trusted by IndianOil, TATA Motors & Indian Railways. CSR, IEC & govt campaigns. Pan-India",
   path: "/",
   keywords: [
     "Nukkad Natak Group India",

@@ -441,10 +441,24 @@ const logos = [
     img: "/clients/govtClients/ghaziabadnagarnigam.png",
     alt: "Ghaziabad Nagar Nigam — nukkad natak client",
   },
-  // {
-  //   img: "/clients/govtClients/csdc.png",
-  //   alt: "Construction Skill Development Council (CSDC) — nukkad natak client",
-  // },
+
+
+
+    {
+    img: "/clients/govtClients/gail-india-limited.png",
+    alt: "Gail India Limited — nukkad natak client",
+  },
+
+    {
+    img: "/clients/govtClients/national-rural-health-mission.png",
+    alt: "National Rural Health Mission — nukkad natak client",
+  },
+
+    {
+    img: "/clients/pvtClients/apollo-hospitals.png",
+    alt: "Apollo Hospitals — nukkad natak client",
+  },
+
 ];
 
 const Home2 = () => {
@@ -453,16 +467,38 @@ const Home2 = () => {
   const marqueeRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   // ✅ Split logos into rows
-  const rows = useMemo(() => {
-    const chunkSize = 12;
-    const result = [];
+// ✅ Dynamic rows calculation
+const rows = useMemo(() => {
+  const total = logos.length;
 
-    for (let i = 0; i < logos.length; i += chunkSize) {
-      result.push(logos.slice(i, i + chunkSize));
+  let rowCount = 2;
+
+  if (total > 30) {
+    rowCount = 3;
+  }
+
+  const baseSize = Math.floor(total / rowCount);
+  const remainder = total % rowCount;
+
+  const result = [];
+  let start = 0;
+
+  for (let i = 0; i < rowCount; i++) {
+    let size = baseSize;
+
+    // extra logos last rows me add honge
+    if (i === rowCount - 1) {
+      size += remainder;
     }
 
-    return result;
-  }, []);
+    result.push(logos.slice(start, start + size));
+
+    start += size;
+  }
+
+  return result;
+
+}, []);
 
   // ✅ Prevent flicker on reload
   useLayoutEffect(() => {

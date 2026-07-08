@@ -6,7 +6,7 @@ export const SITE_URL =
 export const SITE_NAME = "NukkadNatak.com";
 
 export const DEFAULT_DESCRIPTION =
-  "Nukkad Natak Group for CSR campaigns, IEC activities, government awareness programs, and street play events across India.";
+  "India's professional Nukkad Natak Group with 15+ yrs experience. Trusted by IndianOil, TATA Motors & Indian Railways. CSR, IEC & govt campaigns. Pan-India";
 
 export const DEFAULT_KEYWORDS = [
   "Nukkad Natak",
