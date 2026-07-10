@@ -445,13 +445,13 @@ const logos = [
 
 
     {
-    img: "/clients/govtClients/gail-india-limited.png",
+    img: "/clients/govtClients/gailindialimited.png",
     alt: "Gail India Limited — nukkad natak client",
   },
 
     {
-    img: "/clients/govtClients/national-rural-health-mission.png",
-    alt: "National Rural Health Mission — nukkad natak client",
+    img: "/clients/govtClients/nationalhealthmission.png",
+    alt: "National Health Mission — nukkad natak client",
   },
 
     {

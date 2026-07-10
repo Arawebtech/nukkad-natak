@@ -448,7 +448,7 @@ const [openPopup, setOpenPopup] = useState(false);
 
         .categoryWrap button {
           border: none;
-
+  width: 100%;
           background: #ff5b00;
 
           color: white;
