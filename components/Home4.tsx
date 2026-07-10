@@ -667,6 +667,11 @@ const Home4 = () => {
                   style={{
                     backgroundImage: `url("/images/download.svg")`,
                     backgroundColor: "#000000",
+                    display:"flex",
+                    flexDirection:"column",
+                    gap:"5px",
+                    alignItems:"center",
+                    justifyContent:"center"
                   }}
                 >
                   {/* TITLE */}
