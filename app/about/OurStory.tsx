@@ -337,8 +337,10 @@ const OurStory = () => {
   >
     NukkadNatak.com
   </a>{" "}
-  began with a simple vision – making awareness more direct,
-  relatable, and connected to people at the ground level.
+  {/* began with a simple vision – making awareness more direct,
+  relatable, and connected to people at the ground level. */}
+
+  was founded on a simple vision: to make awareness communication more direct, relatable, and grounded in real community engagement.
 </p>
 
 <p
@@ -349,13 +351,33 @@ const OurStory = () => {
     fontSize: "13px",
   }}
 >
-What started as a creative initiative gradually evolved into a trusted Nukkad Natak Group working on awareness campaigns, CSR initiatives, educational programs, and community outreach activities across India.
+{/* What started as a creative initiative gradually evolved into a trusted Nukkad Natak Group working on awareness campaigns, CSR initiatives, educational programs, and community outreach activities across India.
 
 Over the years, our team has contributed to 60+ government projects and successfully delivered 150+ private campaigns for organizations, institutions, NGOs, and leading brands. From public spaces and educational campuses to large-scale outreach initiatives, our focus has always remained the same: creating meaningful audience connection through impactful communication.
 
 The organization is led by a Bharatendu Natya Academy graduate with over 20 years of experience in theatre direction, script writing, creative planning, and end-to-end campaign execution. This strong creative background, combined with years of practical experience, has helped us build long-term trust with organizations across India.
 
 Today, NukkadNatak.com is recognized for its people-focused approach, creative execution, and ability to create awareness initiatives that feel authentic, engaging, and easy for audiences to connect with.
+ */}
+
+
+ What began as a creative initiative has since grown into a trusted Nukkad Natak group, offering a full range of ground-level communication services, including nukkad natak, BTL activations, POSH awareness, corporate culture building, brand promotion, employee engagement and awareness campaigns for government bodies and NGOs. We are certified by the Central Bureau of Communication (CBC), the Government of India's central outreach body under the Ministry of Information & Broadcasting, earlier known as the Song and Drama Division. This certification reflects our credibility and consistency in the field.
+
+Over the years, our team has successfully delivered 60+ government projects and 150+ private campaigns for NGOs, institutions, and leading brands. Our work spans public spaces, educational campuses, corporate events, and large-scale outreach initiatives, with a consistent focus on creating meaningful audience connection through impactful communication.
+
+The organization is led by a Bharatendu Natya Academy graduate with over 20 years of experience in theatre direction, scriptwriting, creative planning, and end-to-end campaign execution. This creative foundation, combined with years of practical experience, has helped us build long-term trust with organizations across India.
+
+Today,   <a
+    href="/about"
+    style={{
+      color: "#eb631d",
+      textDecoration: "none",
+    }}
+  >
+    NukkadNatak.com
+  </a> is recognized for its people-focused approach, strong creative execution, and its ability to design communication initiatives, from street theatre to corporate activations, that are authentic, engaging, and easy for audiences to relate to.
+
+
 </p>
       </div>
 
